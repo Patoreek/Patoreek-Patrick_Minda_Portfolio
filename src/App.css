@@ -1,8 +1,8 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
+.appLogo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.appHeader {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,7 +24,7 @@
   color: white;
 }
 
-.App-link {
+.appLink {
   color: #61dafb;
 }
 
@@ -35,4 +35,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.test {
+  color: red;
 }
