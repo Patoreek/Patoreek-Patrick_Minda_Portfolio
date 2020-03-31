@@ -1,24 +1,20 @@
-import React from 'react';
-import classes from './Bio.css';
-import bioPicture from '../../images/Me.png';
-
-import { Row, Col } from 'react-bootstrap';
-import { Carousel } from 'react-bootstrap';
-
-
-const Bio = (props) => {
-    
+function ControlledCarousel() {
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  
     return (
-        <div className={props.scrolled ? [classes.bio, classes.scrolled].join(' ') : classes.bio }
-            id="bio">
-
-<div className={classes.bioBgText}>Biography</div>
-
-<Row>
-    <Col lg>
-    <Carousel className = {classes.carousel} interval = "20000">
-        <Carousel.Item className ={classes.carouselItem}>
-        <div className={classes.aboutMeContainer}>
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=First slide&bg=373940"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+                <div className={classes.aboutMeContainer}>
                         <h1 className={classes.aboutMeHeader}> About Me</h1>
                         <p  className={classes.aboutMeParagraph}>
                         My career goal is to become successful in the IT industry and be able to 
@@ -33,10 +29,17 @@ const Bio = (props) => {
                         courses.
                         </p>
                 </div>
-
+          </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className ={classes.carouselItem}>
-        <div  className={classes.attributesContainer}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=Second slide&bg=282c34"
+            alt="Second slide"
+          />
+  
+          <Carousel.Caption>
+            <div  className={classes.attributesContainer}>
                     <h3 className={classes.attributesHeader}>Personal Attriubutes</h3>
                     <ul className={classes.attributesList}>
                         <li>Speak and understand a second language - Polish</li>
@@ -52,9 +55,17 @@ const Bio = (props) => {
 
                     </ul>
                 </div>
+          </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className ={classes.carouselItem}>
-        <div className={classes.hobbiesContainer}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="holder.js/800x400?text=Third slide&bg=20232a"
+            alt="Third slide"
+          />
+  
+          <Carousel.Caption>
+          <div className={classes.hobbiesContainer}>
                 <h3 className={classes.hobbiesHeader}>Interests and Hobbies</h3>
                 <ul className={classes.hobbiesList}>
                     <li>Scuba Diver - PADI Advanced Scuba Diver</li>
@@ -62,26 +73,16 @@ const Bio = (props) => {
                     <li>Video Games</li>
                     <li>Photography</li>
                     <li>Video Editing</li>
-                    <li>Playing Instruments - Guitar / Drums / Piano / Ukelele </li>
+                    <li>Able to play Instruments - Guitar / Drums / Piano / Ukelele </li>
                     <li>Music - Electronic Music</li>
                     <li>Music Production</li>
                     <li>Entreprenuership</li>
                 </ul>
             </div>
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      
-    </Col>
-    <Col>
-            <div className={classes.bioPictureContainer}>
-                <img src={bioPicture} alt='Patrick Minda' className={classes.bioPicture}/>
-            </div>
-    </Col>
-  </Row>
-  
-        </div>
-            
     );
-};
-
-export default Bio;
+  }
+  
+  render(<ControlledCarousel />);

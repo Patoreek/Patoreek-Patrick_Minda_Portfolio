@@ -2,31 +2,128 @@
     display: inline-block;
     width: 100%;
     height:900px; 
-    color:red;
-    background-color: blue;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(51,146,166,1) 25%, rgba(0,233,255,1) 50%, rgba(19,214,219,1) 75%, rgba(0,0,0,1) 100%);
+    z-index: 1;
 }
 
 .scrolled {
     margin-top: 56px;
 }
 
-.bioHeader {
-    display: inline-block;
-    width:100%;
-    margin-top: 50px;
-    margin-left: 35%;
+/* ///////////// ABOUT ME CONTAINER //////////////// */
+
+.carousel {
+    margin: 150px 50px 0px 100px;
+    width: 800px;
+    box-shadow: 15px 15px 8px;
+    z-index: 10;
+    
 }
 
-.bioParagraph {
+.aboutMeContainer {
+    background-color: papayawhip;
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.aboutMeHeader {
+    color:black;
+    margin-left: 50px;
+
+}
+
+.aboutMeParagraph {
+    color:black;
+    width: 80%;
+    margin: 25px 0px 0px 50px;
+}
+
+.bioPictureContainer { 
     float:left;
-    width:60%;
-    margin: 5%;
+    margin: 110px 0px 0px 10px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    z-index: 5;
 }
 
 .bioPicture {
-    width:300px;
-    height:300px;
-    box-sizing: border-box;
-    border-radius: 150px;
+    width:450px;
+    height:450px;
+    border-radius: 250px;
     border: 2px solid black;
+    margin: 7%;
+    box-shadow: 10px 10px 20px;
+    z-index: 5;
+    
+
+}
+
+/* ///////////// ATTRIBUTES CONTAINER //////////////// */
+.attributesContainer {
+    background-color: papayawhip;
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 35px 0px 50px 50px;
+    border-radius: 5px;
+}
+
+.attributesHeader {
+    color:black;
+    margin-left: 75px;
+}
+
+.attributesList {
+    color:black;
+    margin: 15px 0px 0px 50px;
+}
+
+.attributesList li {
+    padding: 5px 0px 5px 0px;
+}
+
+/* ///////////// HOBBIES CONTAINER //////////////// */
+
+.hobbiesContainer {
+    background-color: papayawhip;
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 35px 0px 50px 50px;
+    border-radius: 5px;
+
+}
+
+.hobbiesHeader {
+    color:black;
+    margin-left: 75px;
+}
+
+.hobbiesList {
+    color:black;
+    margin: 15px 0px 0px 50px;
+}
+
+.hobbiesList li {
+    padding: 5px 0px 10px 0px; 
+}
+
+.bioBgText {
+    display: inline-block;
+    position:absolute;
+    overflow: hidden;
+    z-index: 5;
+    margin-top:550px;
+    margin-right: 100px;
+    right:0;
+    color: black;
+    font-size: 250px;
+    opacity: 45%;
+    text-shadow:10px 5px 15px;
+    
 }

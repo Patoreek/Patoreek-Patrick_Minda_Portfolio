@@ -1,6 +1,7 @@
 import React from 'react';
-/* import logo from './logo.svg'; */
-/* import classes from './App.css'; */
+
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
 
 import Layout from './hoc/Layout/Layout';
 
