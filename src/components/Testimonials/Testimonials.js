@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import classes from './Testimonials.css';
+import classes from './Testimonials.module.css';
 
 class Testimonials extends Component {
     render() {

@@ -1,11 +1,12 @@
 import React from 'react';
 
 import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
-import classes from './navigationItems.css';
+import classes from './navigationItems.module.css';
 
 const NavigationItems = () => {
     return (
         <ul className = {classes.navigationItems}>
+            <NavigationItem link='banner'>Home</NavigationItem>
             <NavigationItem link='bio'>Bio</NavigationItem>
             { /* <NavigationItem link='education'>Education</NavigationItem> */ }
             <NavigationItem link='skills'>Skills</NavigationItem>

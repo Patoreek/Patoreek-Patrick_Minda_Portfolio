@@ -1,24 +1,60 @@
 import React, { Component } from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import './customCard.css';
 
 class CustomCard extends Component {
+
+    state = {
+        flipCard: false
+    }
+
+    flipCardHandler = () => {
+        this.setState(prevState => ({
+            flipCard: !prevState.flipCard
+          }));
+        console.log('Switched ' + '[CustomCard][flipCardHandler]')
+    }
+
+
+
     render() {
+
+
+        let attachedClasses = ['fullCard'];
+        if (this.state.flipCard) {
+            console.log("True [Custom Card]");
+            attachedClasses = ['fullCard', 'flip'];
+            
+
+        } else {
+            console.log("False [Custom Card]");
+        }
+
         return (
-            <CarouselProvider
-                naturalSlideWidth={100}
-                naturalSlideHeight={125}
-                totalSlides={3}
-            >
-            <Slider>
-                <Slide index={0}>I am the first Slide.</Slide>
-                <Slide index={1}>I am the second Slide.</Slide>
-                <Slide index={2}>I am the third Slide.</Slide>
-            </Slider>
-
-
-
-      </CarouselProvider>
+            <div className={attachedClasses.join(' ')}>
+            <div className="card text-center shadow cardFront">
+                <div className="overflow">
+                    <img src={this.props.picture} alt="projectImage" className="card-img-top"/>
+                </div> 
+                <div className="card-body text-dark">
+                    <h4 className="card-title"> {this.props.title} </h4>
+                    <p className="card-text text-secondary">
+                    {this.props.description}
+                    </p>
+                    <p className="btn btn-outline-success">Go To Project</p>
+                    <p className="btn btn-outline-success" onClick={this.flipCardHandler}>What I learned</p>
+                </div>
+            </div>
+    
+            <div className="card text-center shadow cardBack">
+                <div className="card-body text-dark">
+                    <h4 className="card-title"> BACK OF CARD DETAILS </h4>
+                    <p className="card-text text-secondary">
+                        SOME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED
+                    </p>
+                    <p className="btn btn-outline-success" onClick={this.flipCardHandler}>Back</p>
+                </div>
+            </div>
+    </div>
         );
     }
 }

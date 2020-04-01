@@ -1,5 +1,5 @@
 
-import classes from './progressBar.css';
+import classes from './progressBar.module.css';
 
 /* import styled from 'styled-components'; */
 

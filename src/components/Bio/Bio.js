@@ -1,22 +1,47 @@
-import React from 'react';
-import classes from './Bio.css';
+import React, { Component } from 'react';
+
+
+import classes from './Bio.module.css';
 import bioPicture from '../../images/Me.png';
 
 import { Row, Col } from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
 
+class Bio extends Component {
 
-const Bio = (props) => {
-    
-    return (
-        <div className={props.scrolled ? [classes.bio, classes.scrolled].join(' ') : classes.bio }
+    state = {
+        scrolled: false,
+
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', () => {
+            const isTop = window.scrollY < 650;
+            /* console.log(window.scrollY); */
+            if (isTop !== true){
+                this.setState({scrolled: true});
+                /* console.log(isTop); */
+            } else {
+                this.setState({scrolled: false});
+                /* console.log(isTop); */
+            }
+        })
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll');
+    }
+
+    render() {
+        return (
+<div className={this.state.scrolled ? [classes.bio, classes.scrolled].join(' ') : classes.bio }
             id="bio">
 
 <div className={classes.bioBgText}>Biography</div>
 
 <Row>
     <Col lg>
-    <Carousel className = {classes.carousel} interval = "20000">
+    <Carousel className = {classes.carousel} autoPlay={false}>
         <Carousel.Item className ={classes.carouselItem}>
         <div className={classes.aboutMeContainer}>
                         <h1 className={classes.aboutMeHeader}> About Me</h1>
@@ -80,8 +105,8 @@ const Bio = (props) => {
   </Row>
   
         </div>
-            
-    );
-};
+        );
+    }
+}
 
 export default Bio;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Education.css';
+import classes from './Education.module.css';
 
 class Education extends Component {
     render() {

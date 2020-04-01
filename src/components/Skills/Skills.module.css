@@ -1,0 +1,62 @@
+.skills {
+    width: 100%;
+    height:950px;
+    display: inline-block;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(117,126,255,1) 25%, rgba(0,16,255,1) 50%, rgba(117,126,240,1) 75%, rgba(0,0,0,1) 100%);
+
+}
+
+.skillsHeader {
+    margin: 35px 0px 0px 50px;
+    padding:25px;
+}
+
+.techSkillsContainer {
+    width: 90%;
+    margin-left:50px;
+    height:500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px;
+    overflow: scroll;
+}
+
+.techSkillsList {
+    list-style: none;
+}
+
+.techSkillsList li {
+    padding: 0px 0px 20px 0px;
+}
+
+.traitsHeader {
+    margin: 35px 0px 0px 50px;
+    padding:25px;
+}
+
+.traitsContainer {
+    width: 90%;
+    margin-left:50px;
+    height:500px;
+    box-sizing: border-box;
+    margin:0px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px;
+    overflow: scroll;
+}
+
+.skillsBgText {
+    display: inline-block;
+    position:absolute;
+    overflow: hidden;
+    z-index: 5;
+    margin-top:600px;
+    margin-right: 100px;
+    right:0;
+    color: black;
+    font-size: 250px;
+    opacity: 25%;
+    text-shadow:10px 10px 5px;
+    
+}

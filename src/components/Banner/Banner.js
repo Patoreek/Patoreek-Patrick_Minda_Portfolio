@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import classes from './Banner.css';
+import classes from './Banner.module.css';
 
 class Banner extends Component {
     render() {
         return (
-            <div className={classes.Banner}>
+            <div className={classes.Banner} id="banner">
 
                 <h1>Hello, my name is <b>Patrick Minda.</b></h1>
                 <p>Aspiring / Ambitious / Passionate / Determined Web Developer.</p>

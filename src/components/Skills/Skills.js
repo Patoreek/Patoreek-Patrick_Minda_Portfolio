@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './Skills.css';
+import classes from './Skills.module.css';
 import { Row, Col } from 'react-bootstrap';
 
 import ProgressBar from './ProgressBar/ProgressBar';
