@@ -6,7 +6,6 @@ import bioPicture from '../../images/Me.png';
 
 import { Row, Col } from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
-
 class Bio extends Component {
 
     state = {

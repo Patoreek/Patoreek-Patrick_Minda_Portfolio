@@ -15,31 +15,31 @@ const SocialLinks = () => {
     return (
         <div className={classes.contactInfoContainer}>
         <div className={classes.iconContainer} >
-            <a href="https://www.facebook.com/patrick.minda">
+            <a href="https://www.facebook.com/patrick.minda" target="_blank">
             <FaFacebook className="facebookIcon"/>
             </a>
         </div>
         
-        <div className={classes.iconContainer} >
-            <a href="https://twitter.com/PatrickMinda1">
+        <div className={classes.iconContainer}>
+            <a href="https://twitter.com/PatrickMinda1" target="_blank">
             <FaTwitter className="twitterIcon"/>
             </a>
         </div>
 
 
-        <div className={classes.iconContainer} >
+        <div className={classes.iconContainer}>
             {/* OPEN MAILBOX AND GET READY TO SEND EMAIL*/}
             <IoIosMail className="outlookIcon" />
         </div>
 
-        <div className={classes.iconContainer} >
-            <a href="https://github.com/Patoreek">
+        <div className={classes.iconContainer}>
+            <a href="https://github.com/Patoreek" target="_blank">
             <FaGithub className="githubIcon"/>
             </a>
         </div>
         
-        <div className={classes.iconContainer} >
-            <a href="https://www.linkedin.com/in/patrick-minda-2318a5143/">
+        <div className={classes.iconContainer}>
+            <a href="https://www.linkedin.com/in/patrick-minda-2318a5143/" target="_blank">
             <FaLinkedin className="linkedinIcon"/>
             </a>
         </div>

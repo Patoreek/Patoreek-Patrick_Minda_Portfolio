@@ -1,30 +1,34 @@
-.formInputs {
-    display: inline-block;
-    width: 80%;
-}
+
 
 .formContainer {
-    width: 55%;
+    width: 100%;
     height:auto;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 10px 10px 20px;
     padding: 50px;
-    display: inline-block;
+    float:right;
+    margin: 0px 50px 0px 0px;
+    text-align: center;
 }
 
 .formInput {
     border: 2px solid lightgrey;
     border-radius: 25px;
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: inline-block;
     margin: 5px;
 }
 
+.formInputs {
+    display: inline-block;
+    width: 80%;
+}
+
 .formInput::placeholder, .textAreaInput::placeholder {
     color: #a6a6a6;
-    font-size:20px;
+    font-size:16px;
     padding-left:15px;
 
 }

@@ -4,12 +4,15 @@ import ReactTypingEffect from 'react-typing-effect';
 import { Button } from 'react-bootstrap';
 import { FaFileAlt } from 'react-icons/fa';
 import LandingPageVideo from './LandingPageVideo/LandingPageVideo';
+import ContactModal from '../Modals/ContactModal/ContactModal';
+
 
 import classes from './Banner.module.css';
 class Banner extends Component {
 
         state = {
-            startVideo: false
+            startVideo: false,
+            modalOpen: false
         }
 
         componentDidMount() {
@@ -18,12 +21,22 @@ class Banner extends Component {
 
         }
 
+        openContactModal = () => {
+            this.setState({modalOpen: true});
+        } 
+
+        closeContactModal = () => {
+            this.setState({modalOpen: false});
+        }
+
     render() {
         return (
             <div className={classes.Banner} id="banner">
                 {this.state.startVideo ? <LandingPageVideo/> : null}
                 <div className={classes.nameSloganContainer}>
-                    
+
+                    {this.state.modalOpen ? <ContactModal closeModal={this.closeContactModal}/> : null }
+
                     <ReactTypingEffect
                             text="Hello, my name is Patrick Minda." //text=["Hello.", "World!"]
                             speed="75"
@@ -46,7 +59,7 @@ class Banner extends Component {
                 </div>
                 
                 <div className={classes.buttonsContainer}>
-                    <Button variant="outline-info" className={classes.contactButton}>Contact</Button>{' '}
+                    <Button variant="outline-info" className={classes.contactButton} onClick={this.openContactModal}>Contact</Button>{' '}
                     <Button variant="outline-info" className={classes.downloadButton}>Download <FaFileAlt/></Button>{' '}
                 </div>
             </div>

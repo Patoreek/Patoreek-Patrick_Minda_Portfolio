@@ -8,6 +8,7 @@ import classes from './Contact.module.css';
 
 import ContactForm from "./ContactForm/ContactForm";
 import SocialLinks from "./SocialLinks/SocialLinks";
+import PhoneSVG from './PhoneSVG/PhoneSVG';
 
 class Contact extends Component {
     render() {
@@ -15,11 +16,18 @@ class Contact extends Component {
 
         return (
             <div className={classes.contact} id="contact">
-                <h1> Get in touch with me</h1>
-                <p>You can find me on:</p>
-                <p className={classes.sendEnquiryText}>or send me an enquiry down below</p>
-                <SocialLinks/>
-                <ContactForm/>
+                <h1 className={classes.contactHeader}> Get in touch with me</h1>
+                <Row>
+                    <Col lg>
+                        <PhoneSVG/>
+                        <p className={classes.findMeText}>You can find me on</p>
+                        <SocialLinks/>
+                    </Col>
+                    <Col lg>
+                        <p className={classes.sendEnquiryText}>Send me an message down below</p>
+                        <ContactForm/>
+                    </Col>
+                </Row>
             </div>
         );
     }

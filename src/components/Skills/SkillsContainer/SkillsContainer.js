@@ -29,12 +29,15 @@ import { DiJqueryLogo,
 
 
 import ProgressBar from '../ProgressBar/ProgressBar';
+import LanguageModal from '../../Modals/LanguageModal/LanguageModal';
 
 class SkillsContainer extends Component {
 
     state = {
         downButton: true,
-        upButton:false
+        upButton:false,
+        openModal:false,
+        chosenLang:''
     }
     scrollSkillsDown = () => {
         document.getElementById('skillsContainer').scrollBy({ 
@@ -58,16 +61,21 @@ class SkillsContainer extends Component {
         
     }
 
-    openModal = (language) => {
-        
-        console.log(`Modal should display with some extra information on ${language}`)
+    openModal = (language) => {       
+        this.setState({openModal:true,
+                       chosenLang:language});
+    }
 
-
+    closeModal = () => {       
+        this.setState({openModal:false,
+                       chosenLang:''});
     }
 
     render() {
         return (
             <div>
+            {this.state.openModal ? <LanguageModal closeModal={this.closeModal}
+                                                   language={this.state.chosenLang}/> : null}
             <div className={classes.techSkillsContainer} id='skillsContainer'>
             <Row className={classes.rowComponent}>
                 <Col xs className={classes.colNameComponent} onClick={() => this.openModal('HTML')}>
@@ -88,7 +96,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('JS')}>
+                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('JavaScript')}>
                     <b>Javascript</b>
                     <DiJavascript className="jsIcon"/>
                 </Col>

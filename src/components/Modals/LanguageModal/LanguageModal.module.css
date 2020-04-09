@@ -1,0 +1,7 @@
+.Modal {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width:550px;
+    z-index: 20;
+}

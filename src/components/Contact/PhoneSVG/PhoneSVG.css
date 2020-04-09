@@ -1,0 +1,59 @@
+#phoneSVG {
+    width: 600px;
+    height:auto;
+    margin: 10px 0px 0px 100px;
+}
+
+#Phone {
+animation: phone 1s ease;
+}
+
+@keyframes phone {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+#TextMessage1 {
+    animation: textMsgAppear1 1s ease;
+}
+
+@keyframes textMsgAppear1 {
+    from {
+        opacity: 0%;
+        transform: scale(1.5);
+    } to {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+#TextMessage2 {
+    animation: textMsgAppear2 2s ease;
+}
+
+@keyframes textMsgAppear2 {
+    from {
+        opacity: 0%;
+        transform: scale(1.3);
+    } to {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+#TextMessage3 {
+    animation: textMsgAppear3 3s ease;
+}
+
+@keyframes textMsgAppear3 {
+    from {
+        opacity: 0%;
+        transform: scale(1.8);
+    } to {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
