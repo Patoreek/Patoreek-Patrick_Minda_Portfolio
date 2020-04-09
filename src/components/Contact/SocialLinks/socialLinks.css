@@ -1,0 +1,31 @@
+.facebookIcon, .twitterIcon, .outlookIcon, .githubIcon, .linkedinIcon{
+    width: 50px;
+    height: 50px;
+    transition: 0.1s ease;
+    }
+    
+    .facebookIcon {
+        color: #4267B2;
+    }
+    .twitterIcon {
+        color:#1DA1F2
+    }
+    
+    .outlookIcon {
+        color:#0072c6;
+    }
+    
+    .githubIcon {
+        color:#F1502F;
+    }
+    
+    .linkedinIcon {
+        color:#2867B2;
+    }
+    
+    .facebookIcon:hover, .twitterIcon:hover, .outlookIcon:hover, .githubIcon:hover, .linkedinIcon:hover {
+    
+    transform:scale(1.3);
+    }
+    
+    

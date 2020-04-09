@@ -2,10 +2,13 @@
     width: 100%;
     height: 100%;
     margin-top: 25px;
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
 }
 
 .card:hover {
-  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;  
+  box-shadow: 15px 30px 10px 1px rgba(0, 0, 0, 0.253) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 3%, rgba(244,221,255,1) 100%);
+
 }
 
 .card-body {
@@ -72,4 +75,41 @@
 
 .cardBack {
     transform: rotateY(180deg);
+}
+
+.goToProject {
+    margin-right: 10px;
+    border: 1px solid #6500cf;
+    border-radius: 75px;
+    color:#6500cf;
+    width: 150px;
+    height:40px;
+    font-size: 18px;
+
+
+}
+.whatILearned {
+    margin-left: 10px;
+    border: 1px solid #6500cf;
+    border-radius: 75px;
+    color:#6500cf;
+    width: 150px;
+    height:40px;
+    font-size: 18px;
+}
+
+.backButton {
+    border: 1px solid #6500cf;
+    border-radius: 75px;
+    color:#6500cf;
+    width: 150px;
+    height:40px;
+    font-size: 18px;
+    margin: 140px 0px 0px 0px;
+}
+
+.goToProject:hover, .whatILearned:hover, .backButton:hover {
+    background: linear-gradient(180deg, rgba(189,51,255,1) 0%, rgba(143,19,255,1) 53%, rgba(153,56,255,1) 100%);
+    transition: all .3s ease-in-out;
+    border: 1px solid #8900cf;
 }

@@ -7,6 +7,7 @@ class Testimonials extends Component {
         return (
             <div className={classes.testimonials} id="testimonials">
                 <h1> Testimonials </h1>
+                <div className={classes.testimonialsContainer}></div>
             </div>
         );
     }

@@ -4,3 +4,13 @@
     display: inline-block;
     background-color: purple;
 }
+
+.testimonialsContainer {
+    width: 60%;
+    margin-left:50px;
+    height:500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px;
+    overflow: scroll;
+}

@@ -8,7 +8,7 @@ import Bio from '../../components/Bio/Bio';
 /* import Education from '../../components/Education/Education'; */
 import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
-import Testimonials from '../../components/Testimonials/Testimonials';
+/* import Testimonials from '../../components/Testimonials/Testimonials'; */
 import Contact from '../../components/Contact/Contact';
 
 
@@ -24,7 +24,7 @@ class Layout extends Component {
                 {/* <Education/> */}
                 <Skills/>
                 <Projects/>
-                <Testimonials/>
+                {/*  <Testimonials/> */ }
                 <Contact/>
             </Aux>
         );

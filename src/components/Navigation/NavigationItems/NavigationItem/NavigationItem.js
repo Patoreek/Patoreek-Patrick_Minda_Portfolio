@@ -11,7 +11,7 @@ const NavigationItem = (props) => {
                   smooth={true}
                   spy={true}
                   duration={1500}
-                  offset={-56}
+                  offset={-40}
             >{props.children}</Link>
         </li>
     );

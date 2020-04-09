@@ -11,7 +11,7 @@ class CustomCard extends Component {
         this.setState(prevState => ({
             flipCard: !prevState.flipCard
           }));
-        console.log('Switched ' + '[CustomCard][flipCardHandler]')
+        console.log('Switched ' + '[CustomCard][flipCardHandler]');
     }
 
 
@@ -40,8 +40,8 @@ class CustomCard extends Component {
                     <p className="card-text text-secondary">
                     {this.props.description}
                     </p>
-                    <p className="btn btn-outline-success">Go To Project</p>
-                    <p className="btn btn-outline-success" onClick={this.flipCardHandler}>What I learned</p>
+                    <p className="btn btn-outline-success goToProject">Go To Project</p>
+                    <p className="btn btn-outline-success whatILearned" onClick={this.flipCardHandler}>What I learned</p>
                 </div>
             </div>
     
@@ -51,7 +51,7 @@ class CustomCard extends Component {
                     <p className="card-text text-secondary">
                         SOME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED
                     </p>
-                    <p className="btn btn-outline-success" onClick={this.flipCardHandler}>Back</p>
+                    <p className="btn btn-outline-success backButton" onClick={this.flipCardHandler}>Back</p>
                 </div>
             </div>
     </div>

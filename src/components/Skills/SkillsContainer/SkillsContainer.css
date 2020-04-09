@@ -1,0 +1,17 @@
+.htmlIcon, .cssIcon, .jsIcon, .jqueryIcon, .reactIcon, .phpIcon, .bootstrapIcon, .sqlIcon, .wordpressIcon, .gitIcon, .photoshopIcon {
+    width:50px;
+    height:50px;
+  /*  background-color: lime; */
+    display:inline-block;
+}
+
+
+.htmlIcon {
+    background: -webkit-linear-gradient(#9c47fc, #356ad2) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.htmlIcon .i:before {
+    display: inline-block;
+}

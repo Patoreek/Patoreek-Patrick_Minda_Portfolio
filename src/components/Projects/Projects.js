@@ -14,8 +14,10 @@ class Projects extends Component {
     render() {
         return (
             <div className={classes.projects} id="projects">
-            <h1> Projects </h1>
+            <div className={classes.projectsBgText}>Projects</div>
             <div className={classes.projectsContainer}>
+            <h1 className={classes.projectsHeader}>Projects</h1>
+            <p className={classes.projectsSubheader}>These are 3 of my projects I have worked on</p>
                 <div className="container-fluid d-flex justify-content-center">
                     <div className="row">
                         <div className="col-md-4">

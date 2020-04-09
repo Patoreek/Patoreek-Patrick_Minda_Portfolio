@@ -1,0 +1,37 @@
+
+.traitsContainer {
+    width: 80%;
+    margin:50px 0px 0px 50px;
+    height:600px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 82%, rgba(255,255,255,1) 100%);
+    border-radius: 25px;
+    box-shadow: 5px 0px 20px black;
+    overflow: scroll;
+    font-size: 22px;
+}
+
+.card {
+    margin: 0 !important;
+}
+
+.cardHeader:hover {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 82%, rgba(255,255,255,1) 100%);
+
+}
+
+.accordionHeader {
+    font-size: 32px;
+    color:black;
+    text-decoration: none !important;
+}
+
+.accordianToggle,
+.accordianToggle:active,
+.accordianToggle:focus,
+.accordionToggle:hover,
+.accordionHeader:active,
+.accordionHeader:focus,
+.accordionHeader:hover
+ {
+    text-decoration: none !important;
+}
