@@ -1,7 +1,29 @@
 .Modal {
     position: absolute;
-    top: 30%;
-    left: 35%;
-    width:550px;
+    top: 1%;
+    left: 22%;
     z-index: 20;
+    width:1000px !important;
+    max-width: none !important;
+}
+
+.Title {
+    font-size:40px;
+    margin: 0 auto;
+}
+
+.Table tbody tr td{
+    font-size: 26px;
+    padding-top: 30px;
+    padding-bottom:30px;
+}
+
+.availableTxt {
+    text-align: center;
+    font-size: 22px;
+    margin: 20px 0px 0px 0px;
+}
+
+.MapContainer {
+    margin:0px;
 }

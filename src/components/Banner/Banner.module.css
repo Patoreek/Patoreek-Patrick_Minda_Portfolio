@@ -57,14 +57,3 @@
     color:white;
     font-size: 58px;
 }
-
-.contactButton, .downloadButton {
-    margin: 325px 20px 0px 20px;
-
-    display:inline-block;
-    padding: 10px 50px;
-    font-size: 32px;
-    border-radius: 50px;
-    z-index: 5;
-    position: relative;
-}

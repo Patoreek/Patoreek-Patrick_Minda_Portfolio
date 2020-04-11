@@ -8,6 +8,7 @@ import ContactModal from '../Modals/ContactModal/ContactModal';
 
 
 import classes from './Banner.module.css';
+import './Banner.css';
 class Banner extends Component {
 
         state = {
@@ -59,8 +60,8 @@ class Banner extends Component {
                 </div>
                 
                 <div className={classes.buttonsContainer}>
-                    <Button variant="outline-info" className={classes.contactButton} onClick={this.openContactModal}>Contact</Button>{' '}
-                    <Button variant="outline-info" className={classes.downloadButton}>Download <FaFileAlt/></Button>{' '}
+                    <p className="btn btn-outline-success contactButton" onClick={this.openContactModal}>Contact</p>
+                    <p className="btn btn-outline-success downloadButton">Download<FaFileAlt/></p>
                 </div>
             </div>
         );

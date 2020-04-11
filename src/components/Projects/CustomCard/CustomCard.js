@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './customCard.css';
 
+import { MdReplay,
+         MdRemoveRedEye } from "react-icons/md";
+import { DiGithubBadge } from "react-icons/di";
+
+
+
 class CustomCard extends Component {
 
     state = {
@@ -40,8 +46,9 @@ class CustomCard extends Component {
                     <p className="card-text text-secondary">
                     {this.props.description}
                     </p>
-                    <p className="btn btn-outline-success goToProject">Go To Project</p>
-                    <p className="btn btn-outline-success whatILearned" onClick={this.flipCardHandler}>What I learned</p>
+                    <p className="btn btn-outline-success liveVersionButton">Live Version <MdRemoveRedEye className="buttonIcons"/></p>
+                    <p className="btn btn-outline-success viewSourceButton">Source Code <DiGithubBadge className="buttonIcons"/></p>
+                    <p className="btn btn-outline-success flipCardButton" onClick={this.flipCardHandler}><MdReplay/></p>
                 </div>
             </div>
     

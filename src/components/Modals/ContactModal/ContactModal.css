@@ -1,0 +1,24 @@
+.closeButton {
+    margin: 0 auto;
+    display:inline-block;
+    padding: 10px 50px;
+    font-size: 22px;
+    z-index: 5;
+    position: relative;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.closeButton:hover, .closeButton:active, .closeButton:focus {
+    background-color:black !important;
+    border: 1px solid grey;
+}
+
+.mapPlaceholder {
+    width: 400px;
+    height:400px;
+    margin: 25px 0px 0px 25px;
+    border-radius: 5px;
+    border: 1px solid #f1f1f1;
+}
