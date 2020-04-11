@@ -2,7 +2,8 @@
     width: 100%;
     height:950px;
     display: inline-block;
-    background: radial-gradient(circle, rgba(214,144,255,1) 0%, rgba(151,0,255,1) 48%, rgba(126,0,255,1) 100%);
+    /* background: radial-gradient(circle, rgba(214,144,255,1) 0%, rgba(151,0,255,1) 48%, rgba(126,0,255,1) 100%); */
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(18,186,232,1) 33%, rgba(18,135,232,1) 59%, rgba(18,60,232,1) 100%);
     color: black;
 }
 

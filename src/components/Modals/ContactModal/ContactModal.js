@@ -9,6 +9,7 @@ import { Row, Col } from 'react-bootstrap';
 import mapPlaceholder from '../../../images/mapPlaceholder.png';
 import GoogleMap from '../../GoogleMap/GoogleMap';
 import SocialLinks from '../../Contact/SocialLinks/SocialLinks';
+import Backdrop from '../../Backdrop/Backdrop';
 
 const CustomModal = (props) => {
 
@@ -29,6 +30,8 @@ const CustomModal = (props) => {
         margin:'0 auto'
     }
     return (
+            <div>
+            <Backdrop close={props.closeModal}/>
             <Modal.Dialog className={classes.Modal}>
                 <Modal.Header className={classes.Header}>
                     <Modal.Title className={classes.Title}>Contact Details</Modal.Title>
@@ -77,6 +80,7 @@ const CustomModal = (props) => {
 
                 </Modal.Footer>
             </Modal.Dialog>
+            </div>
     );
 };
 
