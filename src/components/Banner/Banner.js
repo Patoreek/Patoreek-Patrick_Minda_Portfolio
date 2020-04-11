@@ -60,8 +60,8 @@ class Banner extends Component {
                 </div>
                 
                 <div className={classes.buttonsContainer}>
-                    <p className="btn btn-outline-success contactButton" onClick={this.openContactModal}>Contact</p>
-                    <p className="btn btn-outline-success downloadButton">Download<FaFileAlt/></p>
+                    <p className="btn btn-success contactButton" onClick={this.openContactModal}>Contact</p>
+                    <p className="btn btn-success downloadButton">Download<FaFileAlt/></p>
                 </div>
             </div>
         );

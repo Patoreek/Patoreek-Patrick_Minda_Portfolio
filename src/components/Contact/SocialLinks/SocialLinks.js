@@ -11,9 +11,9 @@ import { FaFacebook,
 
 import { IoIosMail } from "react-icons/io";
 
-const SocialLinks = () => {
+const SocialLinks = (props) => {
     return (
-        <div className={classes.contactInfoContainer}>
+        <div style={props.styleLinks}>
         <div className={classes.iconContainer} >
             <a href="https://www.facebook.com/patrick.minda" target="_blank">
             <FaFacebook className="facebookIcon"/>

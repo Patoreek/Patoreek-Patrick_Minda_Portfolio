@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 import classes from './SkillsContainer.module.css';
 import './SkillsContainer.css';
+import GradientSVG from './GradientSVG/GradientSVG';
 
 import { Row, Col, Button } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
@@ -74,12 +75,13 @@ class SkillsContainer extends Component {
     render() {
         return (
             <div>
+            <GradientSVG/> {/* Gradients for Icons are stored here */}
             {this.state.openModal ? <LanguageModal closeModal={this.closeModal}
                                                    language={this.state.chosenLang}/> : null}
             <div className={classes.techSkillsContainer} id='skillsContainer'>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('HTML')}>
-                    <b>HTML</b>
+                <Col xs className={classes.colNameComponent} id="htmlColumn" onClick={() => this.openModal('HTML')}>
+                    <b className="htmlText">HTML</b>
                     <FaHtml5 className="htmlIcon"/>
                 </Col>
                 <Col lg className={classes.colBarComponent}>
@@ -87,7 +89,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('CSS')}>
+                <Col xs className={classes.colNameComponent} id="cssColumn" onClick={() => this.openModal('CSS')}>
                     <b>CSS</b>
                     <FaCss3Alt className="cssIcon"/>
                 </Col>
@@ -96,7 +98,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('JavaScript')}>
+                <Col xs className={classes.colNameComponent} id="jsColumn" onClick={() => this.openModal('JavaScript')}>
                     <b>Javascript</b>
                     <DiJavascript className="jsIcon"/>
                 </Col>
@@ -105,7 +107,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('jQuery')}>
+                <Col xs className={classes.colNameComponent} id="jqueryColumn" onClick={() => this.openModal('jQuery')}>
                     <b>jQuery</b>
                     <DiJqueryLogo className="jqueryIcon"/>
                 </Col>
@@ -114,7 +116,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('React')}>
+                <Col xs className={classes.colNameComponent} id="reactColumn" onClick={() => this.openModal('React')}>
                     <b>React</b>
                     <FaReact className="reactIcon"/>
                 </Col>
@@ -123,7 +125,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('PHP')}>
+                <Col xs className={classes.colNameComponent} id="phpColumn" onClick={() => this.openModal('PHP')}>
                     <b>PHP</b>
                     <FaPhp className="phpIcon"/>
                 </Col>
@@ -132,7 +134,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('Bootstrap')}>
+                <Col xs className={classes.colNameComponent} id="bootstrapColumn" onClick={() => this.openModal('Bootstrap')}>
                     <b>Bootstrap</b>
                     <FaBootstrap className="bootstrapIcon"/>
                 </Col>
@@ -141,7 +143,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('SQL')}>
+                <Col xs className={classes.colNameComponent} id="sqlColumn" onClick={() => this.openModal('SQL')}>
                     <b>SQL</b>
                     <DiMysql className="sqlIcon"/>
                 </Col>
@@ -150,7 +152,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('Wordpress')}>
+                <Col xs className={classes.colNameComponent} id="wordpressColumn" onClick={() => this.openModal('Wordpress')}>
                     <b>*Wordpress</b>
                     <FaWordpress className="wordpressIcon"/>
                 </Col>
@@ -159,7 +161,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('GIT')}>
+                <Col xs className={classes.colNameComponent} id="gitColumn" onClick={() => this.openModal('GIT')}>
                     <b>GIT</b>
                     <FaGitSquare className="gitIcon"/>
                 </Col>
@@ -168,7 +170,7 @@ class SkillsContainer extends Component {
                 </Col>
             </Row>
             <Row className={classes.rowComponent}>
-                <Col xs className={classes.colNameComponent} onClick={() => this.openModal('Photoshop')}>
+                <Col xs className={classes.colNameComponent} id="photoshopColumn" onClick={() => this.openModal('Photoshop')}>
                     <b>Photoshop</b>
                     <DiPhotoshop className="photoshopIcon"/>
                 </Col>

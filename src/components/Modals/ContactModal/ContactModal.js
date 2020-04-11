@@ -8,14 +8,26 @@ import Table from 'react-bootstrap/Table';
 import { Row, Col } from 'react-bootstrap';
 import mapPlaceholder from '../../../images/mapPlaceholder.png';
 import GoogleMap from '../../GoogleMap/GoogleMap';
+import SocialLinks from '../../Contact/SocialLinks/SocialLinks';
 
 const CustomModal = (props) => {
 
-    const style = {
+    const styleForMaps = {
         width: '95%',
         height: '95%'
       }
 
+    const styleForLinks = {
+        width: '60%',
+        height:'100px',
+        backgroundColor: 'white',
+        border:'none',
+        boxShadow: 'none',
+        padding: '25px',
+        display: 'block',
+        textAlign: 'center',
+        margin:'0 auto'
+    }
     return (
             <Modal.Dialog className={classes.Modal}>
                 <Modal.Header className={classes.Header}>
@@ -48,13 +60,14 @@ const CustomModal = (props) => {
                     </Col>
                     <Col>
                         <div className={classes.MapContainer}>
-                            <GoogleMap style={style}/>
+                            <GoogleMap style={styleForMaps}/>
                         </div>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                     <p className={classes.availableTxt}>Available via</p>
+                    <SocialLinks styleLinks={styleForLinks}/>
                     </Col>
                 </Row>
                 </Modal.Body>

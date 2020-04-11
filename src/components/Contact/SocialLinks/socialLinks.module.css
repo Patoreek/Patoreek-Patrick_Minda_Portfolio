@@ -1,15 +1,3 @@
-.contactInfoContainer{
-    width: 60%;
-    height:100px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 10px 10px 20px;
-    padding: 25px;
-    display: inline-block;
-    text-align: center;
-    margin: 25px 0px 0px 120px;
-}
-
 .iconContainer {
     display:inline-block;
     margin:0px 25px;

@@ -1,13 +1,27 @@
+:root{
+    --gradientButton: linear-gradient(
+    45deg,
+    #00ccf5,
+    #009ff5,
+    #008cf0,
+    #0086f5,
+    #0078f0
+    );
+}
+
+
 .contactButton, .downloadButton {
     margin: 325px 20px 0px 20px;
     display:inline-block;
-    padding: 10px 50px;
-    font-size: 32px;
+    padding: 0px 25px;
+    font-size: 36px;
     border-radius: 50px;
-    z-index: 5;
+    z-index: 35;
     position: relative;
-    color: white;
-    border: 1px solid white;
+    background-image: var(--gradientButton);
+    background-size: 400%;
+    color:white;
+    box-shadow: 5px 5px 10px black;
 }
 
 .contactButton:hover,
@@ -16,7 +30,20 @@
 .downloadButton:hover,
 .downloadButton:active,
 .downloadButton:focus  {
-    color:black;
-    background-color:white !important;
-    border: 1px solid black !important;
+    color:white;
+    animation: buttonHover .1s ease 0s 1 normal forwards;
+
+}
+
+@keyframes buttonHover {
+    from {
+        box-shadow: 5px 5px 10px black;
+        transform:scale(1.0);
+        background-position: left;
+    }
+    to {
+        box-shadow: 10px 5px 10px black;
+        transform:scale(1.05);
+        background-position: right;
+    }
 }

@@ -10,7 +10,8 @@ const LandingPageVideo = () => {
 
    return (
         <div>
-            <video id="backgroundVideo" poster="../../../images/BackgroundImage.png" loop autoPlay>
+            <div className="backgroundVideoOverlay"></div>
+            <video id="backgroundVideo" poster="../../../images/harbourBridge.jpg" loop autoPlay>
                 <source src={video} type="video/mp4" />
                 <source src={webmvideo} type="video/webm" />
             </video>
