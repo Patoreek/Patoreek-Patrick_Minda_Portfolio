@@ -37,7 +37,7 @@ const CustomModal = (props) => {
                     <Modal.Title className={classes.Title}>Contact Details</Modal.Title>
                 </Modal.Header>
 
-                <Modal.Body>
+                <Modal.Body className={classes.ModalBody}>
                 <Row>
                     <Col>
                     <Table responsive="sm" className={classes.Table}>

@@ -47,16 +47,18 @@ class LanguageModal extends Component {
         return (
             <Modal.Dialog className={classes.Modal}>
             <Modal.Header>
-                <Modal.Title>Name of Programming Language which is {this.props.language}</Modal.Title>
+                <Modal.Title className={classes.ModalTitle}>{/* Name of Programming Language which is */} {this.props.language}</Modal.Title>
             </Modal.Header>
 
-            <Modal.Body>
+            <Modal.Body className={classes.ModalBody}>
 
                 <p>{this.checkLanguage(this.props.language)}</p>
             </Modal.Body>
 
             <Modal.Footer>
-                <Button variant="secondary" onClick={this.props.closeModal}>Close</Button>
+                <Button variant="outline-primary"
+                        onClick={this.props.closeModal}
+                        className={classes.CloseBtn}>Close</Button>
             </Modal.Footer>
         </Modal.Dialog>
         );

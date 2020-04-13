@@ -64,6 +64,6 @@
                    and (max-width: 768px) {
     /* For desktop: */
         .Banner {
-            width: 100vw;
+            
         }
   }

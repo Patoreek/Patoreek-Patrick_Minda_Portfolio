@@ -1,29 +1,63 @@
 .Modal {
     position: absolute;
-    top: 1%;
-    left: 22%;
+    top: 1vh;
+    left: 20vw;
     z-index: 40;
-    width:1000px !important;
+    width:60vw !important;
+    height:80vh !important;
     max-width: none !important;
 }
 
 .Title {
-    font-size:40px;
+    font-size:3em;
     margin: 0 auto;
 }
 
 .Table tbody tr td{
-    font-size: 26px;
-    padding-top: 30px;
-    padding-bottom:30px;
+    font-size: 1.5em;
+    padding-top: 2.5vh;
+    padding-bottom:2.5vh;
 }
 
 .availableTxt {
     text-align: center;
-    font-size: 22px;
-    margin: 20px 0px 0px 0px;
+    font-size: 1.5em;
+    margin: 2.5vh 0px 0px 0px;
 }
 
 .MapContainer {
     margin:0px;
+}
+
+@media screen and (min-width: 768px)
+and (max-width: 1280px) {
+/* For desktop: */
+
+    .Modal {
+        top: 1vh;
+        left: 20vw;
+        z-index: 60;
+        width:60vw !important;
+        max-width: none !important;
+        max-height: none !important;
+    }
+
+    .Title {
+        font-size:1.5em;
+
+    }
+
+    .Table tbody tr td{
+        font-size: 0.8em;
+    }
+
+    .availableTxt {
+        font-size: 1em;
+
+    }
+
+    .ModalBody {
+       height: 60vh !important; 
+    }
+
 }
