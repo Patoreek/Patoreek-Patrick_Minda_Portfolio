@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
+
+import ReactDOM from 'react-dom';
+import LazyLoad from 'react-lazyload';
 
 import Aux from '../../hoc/Aux/Aux';
+
 
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import Banner from '../../components/Banner/Banner';
@@ -11,21 +15,20 @@ import Projects from '../../components/Projects/Projects';
 /* import Testimonials from '../../components/Testimonials/Testimonials'; */
 import Contact from '../../components/Contact/Contact';
 
-
 class Layout extends Component {
 
 
     render() {
         return (
             <Aux>
-                <Banner/>
-                <Toolbar/>
-                <Bio/>
-                {/* <Education/> */}
-                <Skills/>
-                <Projects/>
-                {/*  <Testimonials/> */ }
-                <Contact/>
+                    <Banner/>
+                    <Toolbar/>
+                    <Bio/>
+                    {/* <Education/> */}
+                    <Skills/>
+                    <Projects/>
+                    {/*  <Testimonials/> */ }
+                    <Contact/>
             </Aux>
         );
     }

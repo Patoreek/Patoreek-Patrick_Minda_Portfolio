@@ -11,10 +11,10 @@
 
 
 .contactButton, .downloadButton {
-    margin: 325px 20px 0px 20px;
+    margin: 35vh 20px 0px 20px;
     display:inline-block;
     padding: 0px 25px;
-    font-size: 36px;
+    font-size: 2em;
     border-radius: 50px;
     z-index: 35;
     position: relative;
@@ -47,3 +47,11 @@
         background-position: right;
     }
 }
+
+@media screen and (min-width: 768px)
+                   and (max-width: 1280px) {
+    /* For desktop: */
+
+  }
+
+  

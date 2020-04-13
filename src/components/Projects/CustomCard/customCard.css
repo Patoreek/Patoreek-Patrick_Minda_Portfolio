@@ -1,19 +1,18 @@
-.card {
-    width: 100%;
-    height: 100%;
-    margin-top: 25px;
+.cardFront {
+    width: 25vw;
+    height: 75vh;
+    margin-top: 0vh;
     box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
 }
 
-.card:hover {
+.cardFront:hover {
   box-shadow: 15px 30px 10px 1px rgba(0, 0, 0, 0.253) !important;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 3%, rgba(244,221,255,1) 100%);
-
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(219,246,255,1) 100%);
 }
 
 .card-body {
-    padding: 25px !important;
-    height:320px;
+    padding: 1vh 1vw !important;
+    height: 0vh;
     overflow: hidden;
 }
 
@@ -31,15 +30,28 @@
 
 
 
-.card-text  {
+.cardText  {
     overflow: hidden;
-    height:50%;
+    height:70%;
+    font-size: 1em ;
+    margin:0;
+}
+
+.cardTextBack {
+    overflow: hidden;
+    height:87%;
+    font-size: 1em ;
+    margin:0;
+}
+
+.card-title {
+    font-size: 1.5em;
 }
 
 
 .fullCard {
-    width:100%;
-    height: 100%;
+    width:50vh;
+    height: 100vh;
     perspective: 1000px;
     position: relative; 
     transform-style: preserve-3d;
@@ -63,9 +75,9 @@
     top: 0;
     margin-top: 0px;
     perspective: 1000px;
-    width:100%;
-    height:100%;
-    
+    width: 25vw;
+    height: 75vh;
+    transform: rotateY(180deg);
 }
 
 .cardFront, .cardBack {
@@ -73,61 +85,120 @@
     backface-visibility: hidden;
   }
 
-.cardBack {
-    transform: rotateY(180deg);
-}
-
 /* #6500cf Purple color */
 /* #123ce8 Blue Color*/
 
 .liveVersionButton {
-    margin: 35px 0px 0px -20px;
+    margin: 0vh 0px 0px 0px;
     border: 1px solid #123ce8; 
     border-radius: 75px;
     color:#123ce8;
     width: auto;
-    height:40px;
-    font-size: 18px;
+    height:4.5vh;
+    font-size: 1.2em;
 }
 
 .viewSourceButton {
-    margin: 35px 0px 0px 20px;
+    margin: 0vh 0px 0px 0.6vw;
     border: 1px solid #123ce8;
     border-radius: 75px;
     color:#123ce8;
     width: auto;
-    height:40px;
-    font-size: 18px;
+    height:4.5vh;
+    font-size: 1.2em;
 
 }
 
 .flipCardButton {
-    margin: 35px 10px 0px 20px;
+    margin: 0vh 0.5vw 0px 0.6vw;
     border: 1px solid #123ce8;
     border-radius: 75px;
     color:#123ce8;
     width: auto;
     height:auto;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
 .backButton {
     border: 1px solid #123ce8;
     border-radius: 75px;
     color:#123ce8;
-    width: 150px;
-    height:40px;
-    font-size: 18px;
-    margin: 210px 0px 0px 0px;
+    width: 7vw;
+    height:4.5vh;
+    font-size: 1.2em;
+    margin: 0vh;
 }
 
 .viewSourceButton:hover, .liveVersionButton:hover, .flipCardButton:hover, .backButton:hover {
     /* background: linear-gradient(180deg, rgba(189,51,255,1) 0%, rgba(143,19,255,1) 53%, rgba(153,56,255,1) 100%); */
     background: linear-gradient(180deg, rgba(18,186,232,1) 0%, rgba(18,135,232,1) 59%, rgba(18,60,232,1) 100%);
-    border: 1px solid #8900cf;
+    border: 1px solid #123ce8;
 }
 
 .buttonIcons {
-    width:30px;
-    height:30px;
+    width:1.5vw;
+    height:3vh;
+}
+
+
+@media screen and (min-width: 768px)
+                   and (max-width: 1280px) {
+    /* For desktop: */
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+       
+    }
+    .card-title {
+        font-size: 1em;
+    }
+
+    .card-text {
+        font-size: 0.8em;
+    }
+
+    .cardTextBack {
+        font-size: 0.8em ;
+    }
+
+    .liveVersionButton {
+        margin: 0vh 0px 0px -0.5vw;
+        border: 1px solid #123ce8; 
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:4.5vh;
+        font-size: 0.6em;
+    }
+    
+    .viewSourceButton {
+        margin: 0vh 0px 0px 0.5vw;
+        border: 1px solid #123ce8;
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:4.5vh;
+        font-size: 0.6em;
+    
+    }
+    
+    .flipCardButton {
+        margin: 0vh 0.5vw 0px 0.6vw;
+        border: 1px solid #123ce8;
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:auto;
+        font-size: 0.6em;
+    }
+    
+    .backButton {
+        border: 1px solid #123ce8;
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:4.5vh;
+        font-size: 0.6em;
+        margin: 0.5vh 0px 0px;
+    }
 }

@@ -19,7 +19,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
-                    <Card.Body>clear and precise communication working with customers at Big W,
+                    <Card.Body className={classes.bodyText}>clear and precise communication working with customers at Big W,
                     communication was vital to customers in JB Hi-Fi, so they purchased
                     the correct product. At Industry Trading, my role as Test Bench Team Leader,
                     I make sure everyone has a clear understanding of their current task, while 
@@ -35,7 +35,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="1">
-                    <Card.Body>As the Test Bench Team Leader, I make sure my team work together
+                    <Card.Body className={classes.bodyText}>As the Test Bench Team Leader, I make sure my team work together
                     and help one another to achieve the task as efficiently as 
                     possible. I teach them how to divide the workload up and keep a
                     constant flow of work outputted. I keep them updated with all 
@@ -51,7 +51,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="2">
-                    <Card.Body>Skills utilised when Scuba Diving and Snorkeling also finding 
+                    <Card.Body className={classes.bodyText}>Skills utilised when Scuba Diving and Snorkeling also finding 
                     solutions whilst working at The Landings as a maintenance man
                     fixing taps, drains, lights etc. As a Test Bench Team Leader,
                     I am one of the few who have to solve problems such as fixing 
@@ -69,7 +69,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="3">
-                    <Card.Body>keen interest to know how things work, and how to build new things.
+                    <Card.Body className={classes.bodyText}>keen interest to know how things work, and how to build new things.
                     This shows in my warehouse experience in finding solutions to fix
                     problems and once learning how to solve the issue, teaching it to
                     others so as a team, we are able to effectively and quickly finish
@@ -85,7 +85,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="4">
-                    <Card.Body>Able to schedule all tasks and organise all the materials needed
+                    <Card.Body className={classes.bodyText}>Able to schedule all tasks and organise all the materials needed
                     for the task. Through my warehouse experience, I created a 
                     whiteboard table to help organise the many jobs that are 
                     simultaneously happening which can get out of hand, especially 
@@ -102,7 +102,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="5">
-                    <Card.Body>willing to ask for more tasks and willing to help others.
+                    <Card.Body className={classes.bodyText}>willing to ask for more tasks and willing to help others.
                     I keep busy by always asking the other members on my team,
                     office and dispatch employees if they are in need of some 
                     extra help. 
@@ -116,7 +116,7 @@ const TraitsContainer = () => {
                     </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey="6">
-                    <Card.Body>willing to ask for more tasks and willing to help others.
+                    <Card.Body className={classes.bodyText}>willing to ask for more tasks and willing to help others.
                     I keep busy by always asking the other members on my team,
                     office and dispatch employees if they are in need of some 
                     extra help. 

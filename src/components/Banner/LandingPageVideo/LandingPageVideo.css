@@ -7,7 +7,7 @@
     min-height: 100%;
     width: auto;
     height:auto;
-    z-index: 29;
+    z-index: 24;
     
 }
 
@@ -17,5 +17,5 @@
     height:950px;
     background-color: white;
     opacity: 10%;
-    z-index: 30;
+    z-index: 25;
 }

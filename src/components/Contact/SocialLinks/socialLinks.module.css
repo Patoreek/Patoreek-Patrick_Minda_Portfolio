@@ -1,4 +1,6 @@
 .iconContainer {
     display:inline-block;
-    margin:0px 25px;
+    margin:0.5vh 0vw;
+    padding: 0px;
+    height:auto;
 }

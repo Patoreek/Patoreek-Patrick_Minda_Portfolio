@@ -9,6 +9,7 @@ import classes from './Contact.module.css';
 import ContactForm from "./ContactForm/ContactForm";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import PhoneSVG from './PhoneSVG/PhoneSVG';
+import GoogleMap from '../GoogleMap/GoogleMap';
 
 class Contact extends Component {
 
@@ -16,30 +17,71 @@ class Contact extends Component {
     render() {
 
         const styleForLinks = {
-            width: '60%',
-            height:'100px',
+            width: '90%',
+            height:'8vh',
             backgroundColor: 'white',
             borderRadius: '5px',
             boxShadow: '10px 10px 20px',
-            padding: '25px',
+            padding: '0vh 0vw 0vh 0vw',
             display: 'inline-block',
             textAlign: 'center',
-            margin: '25px 0px 0px 120px'
+            margin: '0px 20px 0px 30px'
         }
+
+        const styleForMaps = {
+            width: '90%',
+            height: '85%',
+            margin: '8vh 0px 0px 0px',
+            borderRadius: '15px'
+          }
 
 
         return (
             <div className={classes.contact} id="contact">
-                <h1 className={classes.contactHeader}> Get in touch with me</h1>
+                <div className={classes.contactBgText}>Contact</div>
+                <h1 className={classes.contactHeader}
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                    data-aos-duration="1000"> Get in touch with me</h1>
                 <Row>
                     <Col lg>
-                        <PhoneSVG/>
-                        <p className={classes.findMeText}>You can find me on</p>
-                        <SocialLinks styleLinks={styleForLinks}/>
+                        <div data-aos="zoom-out"
+                            data-aos-delay="200"
+                            data-aos-duration="1000">
+                            <PhoneSVG/>
+                        </div>
+                        <p className={classes.findMeText}
+                           data-aos="fade"
+                           data-aos-delay="200"
+                           data-aos-duration="1000"
+                           data-aos-offset="0"
+                           data-aos-anchor-placement="top-bottom">You can find me on</p>
+                           
+                           <div data-aos="fade-up-right"
+                            data-aos-delay="300"
+                            data-aos-duration="1000"
+                            data-aos-offset="0"
+                            data-aos-anchor-placement="top-bottom">
+                            <SocialLinks styleLinks={styleForLinks}/>
+                            </div> 
+        
                     </Col>
                     <Col lg>
-                        <p className={classes.sendEnquiryText}>Send me an message down below</p>
-                        <ContactForm/>
+                        <p className={classes.sendEnquiryText}
+                            data-aos="fade"
+                            data-aos-delay="200"
+                            data-aos-duration="800">Send me a message down below</p>
+                        <div data-aos="zoom-in"
+                             data-aos-delay="200"
+                             data-aos-duration="1000">
+                            <ContactForm/>
+                        </div>
+                    </Col>
+                    <Col lg>
+                        
+                                <GoogleMap style={styleForMaps}/>
+                        
+                        
                     </Col>
                 </Row>
             </div>

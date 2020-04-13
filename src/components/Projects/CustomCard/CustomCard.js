@@ -43,7 +43,7 @@ class CustomCard extends Component {
                 </div> 
                 <div className="card-body text-dark">
                     <h4 className="card-title"> {this.props.title} </h4>
-                    <p className="card-text text-secondary">
+                    <p className="card-text text-secondary cardText">
                     {this.props.description}
                     </p>
                     <p className="btn btn-outline-success liveVersionButton">Live Version <MdRemoveRedEye className="buttonIcons"/></p>
@@ -55,8 +55,13 @@ class CustomCard extends Component {
             <div className="card text-center shadow cardBack">
                 <div className="card-body text-dark">
                     <h4 className="card-title"> BACK OF CARD DETAILS </h4>
-                    <p className="card-text text-secondary">
-                        SOME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED
+                    <p className="card-text text-secondary cardTextBack">
+                        SOME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.
+                        OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.
+                        OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.
+                        OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.
+                        OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.
+                        OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.OME EXTRA DETAILS SUCH AS WHAT I HAVE LEARNED.
                     </p>
                     <p className="btn btn-outline-success backButton" onClick={this.flipCardHandler}>Back</p>
                 </div>

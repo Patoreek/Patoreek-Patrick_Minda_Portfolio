@@ -42,7 +42,7 @@ class SkillsContainer extends Component {
     }
     scrollSkillsDown = () => {
         document.getElementById('skillsContainer').scrollBy({ 
-            top: 350, // could be negative value
+            top: 650, // could be negative value
             left: 0, 
             behavior: 'smooth' 
           });
@@ -53,7 +53,7 @@ class SkillsContainer extends Component {
 
     scrollSkillsUp = () => {
         document.getElementById('skillsContainer').scrollBy({ 
-            top: -350, // could be negative value
+            top: -650, // could be negative value
             left: 0, 
             behavior: 'smooth' 
           });

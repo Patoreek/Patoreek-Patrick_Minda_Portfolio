@@ -11,8 +11,8 @@
 }
 
 .progress {
-    height: 40px;
-    width:500px;
+    height: 4vh;
+    width:25vw;
     background-color: #d8d8d8;
     border-radius: 20px;
     display:inline-block;

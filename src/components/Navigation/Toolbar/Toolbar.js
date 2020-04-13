@@ -11,7 +11,11 @@ class Toolbar extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', () => {
-            const isTop = window.scrollY < 875;
+            const bannerHeight = document.getElementById('banner').offsetHeight;
+
+            const isTop = window.scrollY < bannerHeight; /* 832px */
+
+            console.log('[Toolbar] height of banner is ' + bannerHeight);
             /* console.log(window.scrollY); */
             if (isTop !== true){
                 this.setState({scrolled: true});
@@ -29,7 +33,7 @@ class Toolbar extends Component {
 
     render() {
         return (
-            <nav className={this.state.scrolled ? [classes.toolbar, classes.scrolled].join(' ') : classes.toolbar }>
+            <nav className={this.state.scrolled ? [classes.toolbar, classes.scrolled].join(' ') : classes.toolbar } id="toolbar">
             <NavigationItems/>
     </nav>
         );

@@ -127,7 +127,7 @@ class ContactForm extends Component {
 
                     <Form.Group as={Row}>
                         <Col>
-        <Button type="submit" className={classes.signInButton}>{this.state.buttonText}</Button>
+        <Button type="submit" className={classes.sendMessageButton}>{this.state.buttonText}</Button>
                         </Col>
                     </Form.Group>
                 </Form>
