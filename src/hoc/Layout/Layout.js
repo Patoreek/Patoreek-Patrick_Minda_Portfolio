@@ -1,7 +1,4 @@
-import React, { Component, lazy, Suspense } from 'react';
-
-import ReactDOM from 'react-dom';
-import LazyLoad from 'react-lazyload';
+import React, { Component } from 'react';
 
 import Aux from '../../hoc/Aux/Aux';
 

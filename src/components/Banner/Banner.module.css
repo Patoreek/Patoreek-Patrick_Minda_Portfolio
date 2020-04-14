@@ -60,10 +60,40 @@
 }
 
 
-@media screen and (min-width: 370px)
+
+@media screen and (min-width: 375px)
                    and (max-width: 768px) {
-    /* For desktop: */
-        .Banner {
-            
-        }
-  }
+    /* For mobile: */ 
+    .Banner {
+        width:100vw;
+        height:100vh;
+        background-image: url('../../images/OperaHouseVivid.gif');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 150%;
+        background-color: black;
+    }
+    .nameText, .sloganTextStart, .sloganTextEnd, .sloganArea {
+        /* background-color: mistyrose; */
+        color:white;
+        margin: 5vh 0vw 0vh 0vw;
+
+    }
+
+    .nameText, .sloganTextStart, .sloganTextEnd {
+        font-size: 1.2em;
+    }
+
+    .sloganArea {
+        font-size: 1em;
+    }
+
+    .sloganTextStart{ 
+        width:46vw;
+        display: inline-block;
+        position: relative;
+        z-index: 26;
+    }
+}
+
+    

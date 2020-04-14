@@ -1,0 +1,18 @@
+.dropdownBtnIcon {
+    margin: 1vh 4vw;
+    display: flex;
+    box-sizing: border-box;
+    align-items:center;
+    color: white;
+    width: 8vw;
+    height: 4vh;
+}
+
+.active {
+    color: #007CFF;
+}
+
+.hide {
+    display:none;
+}
+

@@ -49,5 +49,24 @@
 }
 
 
+@media screen and (min-width: 375px)
+                   and (max-width: 768px) {
+    /* For mobile: */ 
+    .contactButton, .downloadButton {
+        margin: 48vh 2vw 0px 2vw;
+        display:inline-block;
+        padding: 0px 5vw;
+        font-size: 1.4em;
+        border-radius: 50px;
+        z-index: 35;
+        position: relative;
+        background-image: var(--gradientButton);
+        background-size: 400%;
+        color:white;
+        box-shadow: 5px 5px 10px black;
+    }
+}
+
+
 
   

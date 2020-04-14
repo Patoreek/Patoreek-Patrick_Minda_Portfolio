@@ -12,6 +12,7 @@ const NavigationItem = (props) => {
                   spy={true}
                   duration={1500}
                   offset={-40}
+                  onClick={props.closeDropdown}
             >{props.children}</Link>
         </li>
     );

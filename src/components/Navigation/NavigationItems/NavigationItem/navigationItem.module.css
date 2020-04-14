@@ -3,8 +3,9 @@
     display: flex;
     box-sizing: border-box;
     height: 100%;
-    width: auto;
+    width: 100%;
     align-items:center;
+    margin-left: 0px;
 }
 
 .navigationItem a {

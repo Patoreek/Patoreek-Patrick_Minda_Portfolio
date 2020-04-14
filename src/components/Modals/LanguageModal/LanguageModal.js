@@ -3,14 +3,7 @@ import React, { Component } from 'react';
 import classes from './LanguageModal.module.css';
 
 import Modal from 'react-bootstrap/Modal';
-import Table from 'react-bootstrap/Table'
 import { Button } from 'react-bootstrap';
-
-import { FaFacebook,
-    FaTwitter,
-    FaGithub,
-    FaLinkedin
-    } from "react-icons/fa";
 
 class LanguageModal extends Component {
 
@@ -38,6 +31,8 @@ class LanguageModal extends Component {
                 return (<p>This returned the GIT paragraph</p>);
             case 'Photoshop':
                 return (<p>This returned the Photoshop paragraph</p>);
+            default:
+                return (<p>Error in switch case</p>);;
         }
     }
 

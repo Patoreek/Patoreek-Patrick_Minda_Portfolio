@@ -51,3 +51,17 @@
     }
 
 }
+
+
+@media screen and (min-width: 375px)
+and (max-width: 768px) { 
+
+    .progress {
+        height: 4vh;
+        width:90vw;
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        display:inline-block;
+    }
+
+}

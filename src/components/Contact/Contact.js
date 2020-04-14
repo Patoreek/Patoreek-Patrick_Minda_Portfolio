@@ -25,7 +25,7 @@ class Contact extends Component {
             padding: '0vh 0vw 0vh 0vw',
             display: 'inline-block',
             textAlign: 'center',
-            margin: '0px 20px 0px 30px'
+            margin: '0px 0vw 0px 1.5vw'
         }
 
         const styleForMaps = {
@@ -47,7 +47,8 @@ class Contact extends Component {
                     <Col lg>
                         <div data-aos="zoom-out"
                             data-aos-delay="200"
-                            data-aos-duration="1000">
+                            data-aos-duration="1000"
+                            className={classes.phoneSVG}>
                             <PhoneSVG/>
                         </div>
                         <p className={classes.findMeText}

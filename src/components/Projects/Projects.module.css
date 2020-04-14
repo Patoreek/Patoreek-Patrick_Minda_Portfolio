@@ -68,8 +68,26 @@
 
 @media screen and (min-width: 375px)
                    and (max-width: 768px) {
-    /* For desktop: */
-        .projects {
-            display:none
-        }
+    /* For mobile: */
+    .projects {
+        width: 100%;
+        height:265vh;
+    }
+    
+    .projectsBgText {
+        display: none;
+    }
+
+    .projectsContainer {
+        margin-top: 3vh;
+    }
+    
+    .projectsHeader {
+        font-size: 3em;
+
+    }
+    
+    .projectsSubheader {
+        font-size: 1em;
+    }
   }

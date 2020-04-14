@@ -79,3 +79,40 @@
     
     }
 }
+
+@media screen and (min-width: 375px)
+and (max-width: 768px) {
+/* Mobile */
+.techSkillsContainer {
+    width: 90vw;
+    margin:0px 0px 0px 2vw;
+    height:50vh;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 22px;
+    position: relative;
+}
+.colNameComponent{
+    /*  background-color: paleturquoise; */
+     text-align: center;
+     padding: 0px 0.5vw 0px 0px;
+     transition: all .1s ease-in-out;
+     box-sizing: border-box;
+     width: 20px;
+     font-size: 0.9em;
+ }
+
+ .downButton {
+
+    display:none;
+}
+
+.upButton {
+
+    display:none;
+
+}
+
+
+}

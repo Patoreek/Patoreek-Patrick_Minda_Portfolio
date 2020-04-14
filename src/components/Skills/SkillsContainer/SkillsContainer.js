@@ -7,7 +7,6 @@ import './SkillsContainer.css';
 import GradientSVG from './GradientSVG/GradientSVG';
 
 import { Row, Col, Button } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal';
 
 import { MdExpandMore,
          MdExpandLess } from 'react-icons/md';

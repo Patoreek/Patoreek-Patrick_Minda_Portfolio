@@ -51,7 +51,7 @@
 
 .fullCard {
     width:50vh;
-    height: 100vh;
+    height: 80vh;
     perspective: 1000px;
     position: relative; 
     transform-style: preserve-3d;
@@ -201,5 +201,83 @@
         height:4.5vh;
         font-size: 0.6em;
         margin: 0.5vh 0px 0px;
+    }
+}
+
+@media screen and (min-width: 375px)
+                   and (max-width: 768px) {
+    /* For mobile: */ 
+    .cardFront {
+        width: 90vw;
+        height: 75vh;
+        margin-top: 0vh;
+        box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+    }
+
+    .cardBack {
+        width: 90vw;
+        height: 75vh;
+    }
+
+    .card-img-top {
+        height: 60vw;
+       
+    }
+    .card-title {
+        font-size: 1em;
+    }
+
+    .card-text {
+        font-size: 0.8em;
+    }
+
+    .cardTextBack {
+        font-size: 0.8em ;
+    }
+
+    .liveVersionButton {
+        margin: 0vh 0px 0px -0.5vw;
+        border: 1px solid #123ce8; 
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:4.5vh;
+        font-size: 0.8em;
+    }
+    
+    .viewSourceButton {
+        margin: 0vh 0px 0px 0.5vw;
+        border: 1px solid #123ce8;
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:4.5vh;
+        font-size: 0.8em;
+    
+    }
+    
+    .flipCardButton {
+        margin: 0vh 0.5vw 0px 0.6vw;
+        border: 1px solid #123ce8;
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:auto;
+        font-size: 0.8em;
+    }
+    
+    .backButton {
+        border: 1px solid #123ce8;
+        border-radius: 75px;
+        color:#123ce8;
+        width: auto;
+        height:4.5vh;
+        font-size: 0.8em;
+        margin: 0.5vh 0px 0px;
+    }
+
+    .buttonIcons {
+        width:5vw;
+        height:3vh;
     }
 }

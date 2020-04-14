@@ -14,6 +14,10 @@
     
 }
 
+.navItems { 
+    margin: 0 auto;
+}
+
 .toolbar nav {
     height: 100%;
 
@@ -25,4 +29,33 @@ top: 0;
 width: 100%;
 }
 
+.dropdownToggle {
+    display: none;
+}
   
+
+@media screen and (min-width: 370px)
+                   and (max-width: 768px) {
+    /* For Mobile: */
+    .toolbar {
+        height:56px;
+        width:100vw;
+        position: fixed;
+        top:0;
+        left: 0;
+        margin-top: 0px;
+        padding: 0px;
+    }
+
+    .dropdownToggle {
+        display: block;
+        float:left;
+        padding:0px;
+    }
+
+    .navItems { 
+        display:none;
+
+    }
+      
+  }

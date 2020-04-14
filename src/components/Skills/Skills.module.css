@@ -68,8 +68,46 @@
 
   @media screen and (min-width: 375px)
                    and (max-width: 768px) {
-    /* For desktop: */
-        .skills {
-            display:none;
-        }
+    /* For Mobile: */
+
+    .skills {
+        width: 100vw;
+        height:200vh;    
+    }
+
+    .skillsHeader {
+        margin: 3vh 0px 0px 30vw;
+    }
+
+    .traitsHeader {
+        display:block;
+        padding: 3vh 0px 0px 12vw;
+    }
+
+    .skillsSubheader {
+        text-align: center;
+        margin: 0vh 5vw 0vh 0vw;
+    }
+
+    .traitsSubheader {
+        text-align: center;
+        margin: 0vh 15vw 0vh 0vw;
+    }
+
+
+
+    
+    .traitsHeader {
+        margin-left: 15vw;
+    }
+    
+    .traitsSubheader {
+        margin-left: 10.5vw;
+    }
+
+    .skillsBgText {
+        display:none;
+        
+    }
+
   }
