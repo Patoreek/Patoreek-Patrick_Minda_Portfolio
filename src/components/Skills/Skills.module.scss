@@ -1,0 +1,336 @@
+@import '../../sass/abstracts/variables';
+@import '../../sass/base/animations';
+
+.skillsContainer {
+    width: 100vw;
+    height:120vh;
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,250,196,1) 82%, rgba(255,254,167,1) 100%); */
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
+    overflow: hidden;
+    padding: 15rem 10rem 5rem 10rem;
+    margin-top: -15rem;
+
+    // display: flex;
+    // flex-wrap:wrap;
+    // justify-content: center;
+    // align-items: center;
+
+    display: grid;
+    grid-template-rows: max-content max-content 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    
+
+    .skillsHeader {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            font-size: 10rem;
+        }
+    }
+
+
+    .cubeContainer {
+
+        grid-row: 2 / span 2;
+        grid-column: 2 / span 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .scene {
+            width: 20rem;
+            height: 20rem;
+            perspective: 60rem;
+            transform: scale(1.5);
+        }
+      
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(-10rem);
+            transition: transform 1s;
+        }
+
+        .showFront  { 
+            transform: translateZ(-10rem) rotateY(   0deg);
+        }
+        .showRight  { 
+            transform: translateZ(-10rem) rotateY( -90deg);
+        }
+        .showBack   { 
+            transform: translateZ(-10rem) rotateY(-180deg);
+        }
+        .showLeft   { 
+            transform: translateZ(-10rem) rotateY(  90deg);
+        }
+        .showTop    { 
+            transform: translateZ(-10rem) rotateX( -90deg);
+        }
+        .showBottom { 
+            transform: translateZ(-10rem) rotateX(  90deg);
+        }
+        
+        .cubeFace {
+            position: absolute;
+            width: 20rem;
+            height: 20rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .cubeText {
+                font-size: 2rem;
+                //color: white;
+                color: black;
+
+                .reactIcon {
+                    font-size: 10rem;
+                    fill:  #61dbfb;
+                }
+                .nodeIcon {
+                    font-size: 10rem;
+                    fill: #68A063;
+                }
+                .sassIcon {
+                    font-size: 10rem;
+                    fill: #cc6699;
+                }
+                .figmaIcon {
+                    font-size: 10rem;
+                    fill: #9636f7;
+                }
+                .githubIcon {
+                    font-size: 10rem;
+                    fill: #f1502f;
+                }
+                .wordpressIcon {
+                    font-size: 10rem;
+                    fill: #21759b;
+                }
+            }
+        }
+
+        .faceFront  { 
+            //background: rgba(255, 0, 0, 0.7);
+            background: rgba(244, 244, 244, 0.9);
+            border: 1px solid black;
+            transform: rotateY(  0deg) translateZ(10rem);
+        }
+        .faceRight  { 
+            //background: rgba(255, 255, 0, 0.7);
+            background: rgba(244, 244, 244, 0.9);
+            border: 1px solid black;
+            transform: rotateY( 90deg) translateZ(10rem);
+        }
+        .faceBack   { 
+            //background: rgba(0, 255, 0, 0.7);
+            background: rgba(244, 244, 244, 0.9);
+            border: 1px solid black;
+            transform: rotateY(180deg) translateZ(10rem);
+        }
+        .faceLeft   { 
+            //background: rgba(0, 255, 255, 0.7);
+            background: rgba(244, 244, 244, 0.9);
+            border: 1px solid black;
+            transform: rotateY(-90deg) translateZ(10rem);
+        }
+        .faceTop    { 
+            //background: rgba(0, 0, 255, 0.7);
+            background: rgba(244, 244, 244, 0.9);
+            border: 1px solid black;
+            transform: rotateX( 90deg) translateZ(10rem);
+        }
+        .faceBottom { 
+            //background: rgba(255, 0, 255, 0.7);
+            background: rgba(244, 244, 244, 0.9);
+            border: 1px solid black;
+            transform: rotateX(-90deg) translateZ(10rem);
+        }
+
+    }
+    
+    .btn {
+        width: 5rem; 
+        height: 5rem;
+        border-radius: 50%;
+        font-size: 2rem;
+        text-transform: uppercase;
+        border: 1px solid rgb(81, 80, 80);
+        background-color: #0d76d2;
+        box-shadow: .5rem .5rem 1.5rem black;
+        position: relative;
+        transition: all .3s ease;
+        outline: none;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: $color-blue;
+            opacity: 100%;
+            transition: all .3s ease;
+            z-index: 5;
+
+        }
+
+        &:hover {
+            transform: translateY(-.3rem) scale(1.1);
+            box-shadow: .5rem .8rem 2rem black;
+
+        }
+
+        &:hover::before {
+            transform: scale(1.8);
+            opacity: 0;
+        }
+
+        .btnIcon {
+            position: relative;
+            z-index: 10;
+            color: $color-white;
+        }
+        
+    }
+
+    .prevBtn {
+        grid-row: 2 / span 2;
+        grid-column: 1 / 2;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nextBtn {
+        grid-row: 2 / span 2;
+        grid-column: 4 / 5;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .skillsBoxGridCell {
+        grid-row: 4/5;
+        grid-column: 1 / span 4;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        //background-color: lightblue;
+        padding: 0rem;
+
+        // .skillsBoxContainer {
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: rgb(223, 223, 223);
+        // }
+
+        .skillsBoxHeader {
+            width: 100%;
+            height: auto;
+            //background-color: yellow;
+            border-bottom: 1px solid rgb(162, 161, 161);
+            display: flex;
+            justify-content: center;
+
+            h3 { 
+                font-size: 5rem;
+                animation-name: moveInLeft;
+                animation-duration: .8s;
+                animation-timing-function: ease-out;
+
+            }
+
+        }
+
+        .technologiesContainer {
+            width: 100%;
+            height: auto;
+            //background-color: rgb(0, 255, 123);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+
+            .techIcon {
+                font-size: 6rem;
+                animation-name: fadeIn;
+                animation-duration: .8s;
+                animation-timing-function: ease-out;
+            }
+
+            .techJSIcon {
+                fill: #F0DB4F;
+            }
+
+            .techJQIcon {
+                fill: #0868AC;
+            }
+
+            .techBSIcon {
+                fill: #563d7c;
+            }
+
+            .techNPMIcon {
+                fill: #CC3534;
+            }
+
+            .techSqlIcon {
+                fill: #00758F;
+            }
+
+            .techMongoIcon {
+                fill: #3FA037;
+                //fill: #4DB33D;
+
+            }
+
+            .techPhpIcon {
+                fill: #474A8A;
+                //fill: #787CB5;
+            }
+
+            .techCSSIcon {
+                fill: #264DE4;
+                //fill: #2965F1;
+
+            }
+
+            .techPSIcon {
+                fill: #3c327B;
+                //fill: #8BC3FC;
+            }
+
+            .techGitIcon {
+                fill: #F1502F;
+            }
+        }
+
+        .descriptionContainer {
+            width: 100%;
+            height: auto;
+            //background-color: rgb(106, 57, 255);
+            display: flex;
+            padding: 1rem;
+            
+            p {
+                font-size: 1.6rem;
+                animation-name: moveInBottom;
+                animation-duration: .8s;
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+}
+
+
