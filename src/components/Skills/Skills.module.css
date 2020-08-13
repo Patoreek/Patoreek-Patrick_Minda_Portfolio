@@ -1,9 +1,10 @@
 .skills {
-    width: 100%;
+    width: 100vw;
     height:100vh;
     display: inline-block;
     /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,250,196,1) 82%, rgba(255,254,167,1) 100%); */
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%);
+    overflow: hidden;
 
 }
 

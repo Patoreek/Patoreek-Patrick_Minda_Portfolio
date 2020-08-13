@@ -1,9 +1,10 @@
 .contact {
-    width: 100%;
+    width: 100vw;
     height:100vh;
     display: inline-block;
     /* background-image: url(../../images/Contact.png); */
     background: radial-gradient(circle, rgba(255,233,0,1) 0%, rgba(255,229,0,1) 100%);
+    overflow: hidden;
 }
 
 .contactHeader {

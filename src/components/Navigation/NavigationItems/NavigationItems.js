@@ -1,19 +1,58 @@
 import React from 'react';
 
-import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
-import classes from './navigationItems.module.css';
-import { FaHome } from 'react-icons/fa';
+import classes from './NavigationItems.module.scss';
+
+import { Link } from 'react-scroll';
+
 const NavigationItems = (props) => {
     return (
-        <ul className = {props.dropdown ? classes.navigationItemsDropdown : classes.navigationItems}>
-            <NavigationItem link='banner' closeDropdown={props.closeDropdown}><FaHome/></NavigationItem>
-            <NavigationItem link='bio' closeDropdown={props.closeDropdown}>Bio</NavigationItem>
-            { /* <NavigationItem link='education'>Education</NavigationItem> */ }
-            <NavigationItem link='skills'>Skills</NavigationItem>
-            <NavigationItem link='projects'>Projects</NavigationItem>
-            { /* <NavigationItem link='testimonials'>Testimonials</NavigationItem> */ }
-            <NavigationItem link='contact'>Contact</NavigationItem>
-        </ul>
+        <div className={classes.navigationItems}>
+                 <div className={classes.navigationItem}>
+                    <Link to='banner'
+                        smooth={true}
+                        spy={true}
+                        duration={1500}
+                        offset={-40}
+                        onClick={props.closeDropdown}
+                    >Home</Link>
+                </div>
+                <div className={classes.navigationItem}>
+                    <Link to='bio'
+                        smooth={true}
+                        spy={true}
+                        duration={1500}
+                        offset={-40}
+                        onClick={props.closeDropdown}
+                    >Bio</Link>
+                </div>
+                <div className={classes.navigationItem}>
+                    <Link to='skills'
+                        smooth={true}
+                        spy={true}
+                        duration={1500}
+                        offset={-40}
+                        onClick={props.closeDropdown}
+                    >Skills</Link>
+                </div>
+                <div className={classes.navigationItem}>
+                    <Link to='projects'
+                        smooth={true}
+                        spy={true}
+                        duration={1500}
+                        offset={-40}
+                        onClick={props.closeDropdown}
+                    >Projects</Link>
+                </div>
+                <div className={classes.navigationItem}>
+                    <Link to='contact'
+                        smooth={true}
+                        spy={true}
+                        duration={1500}
+                        offset={-40}
+                        onClick={props.closeDropdown}
+                    >Contact</Link>
+                </div>
+        </div>
     );
 };
 

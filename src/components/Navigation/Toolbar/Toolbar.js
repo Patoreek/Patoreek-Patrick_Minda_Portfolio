@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
 
-import NavigationItems from '../NavigationItems/NavigationItems';
-import classes from './toolbar.module.css';
-import DropdownBtn from '../DropdownBtn/DropdownBtn';
-import Dropdown from '../DropdownBtn/Dropdown/Dropdown';
 
-class Toolbar extends Component {
+import React, { useState, useEffect} from 'react';
 
-    state = {
-        scrolled: false,
-        mobile: false,
-        dropdown: false
-    }
+import classes from './Toolbar.module.scss';
 
-    componentDidMount() {
+
+import { Link } from 'react-scroll';
+
+
+const Toolbar = () => {
+
+
+    const [scrolled,setScrolled] = useState(false);
+
+    useEffect(() => {
         window.addEventListener('scroll', () => {
             const bannerHeight = document.getElementById('banner').offsetHeight;
 
@@ -22,47 +22,74 @@ class Toolbar extends Component {
             console.log('[Toolbar] height of banner is ' + bannerHeight);
             /* console.log(window.scrollY); */
             if (isTop !== true){
-                this.setState({scrolled: true});
+                setScrolled(true);
                 /* console.log(isTop); */
             } else {
-                this.setState({scrolled: false});
+                setScrolled(false);
                 /* console.log(isTop); */
             }
         });
-    }
-
-    componentWillUnmount() {
-       /*  window.removeEventListener('scroll'); */
-    }
-
-    toggleDropdown = () => {
-        console.log('[Toolbar][openDropdown]');
-
-        this.setState(prevState => ({
-            dropdown: !prevState.dropdown
-          }));
-
-          console.log(this.state.dropdown);
-    }
+    },[]);
 
 
-    render() {
+    return (
+        <nav className={scrolled ? [classes.toolbar, classes.scrolled].join(' ') : classes.toolbar } id="toolbar">     
+            <Link to='banner'
+                smooth={true}
+                spy={true}
+                duration={1500}
+                offset={-65}
+                className={classes.navLink}
+            >
+                Home
+            </Link>   
+                    
+            <Link to='bio'
+                    smooth={true}
+                    spy={true}
+                    duration={1500}
+                    offset={-65}
+                    className={classes.navLink}
+            >
+                Bio
+            </Link>
+        
+        
+            <Link to='skills'
+                smooth={true}
+                spy={true}
+                duration={1500}
+                offset={-65}
+                className={classes.navLink}
+            >
+                Skills
+            </Link>
+        
+        
+            <Link to='projects'
+                smooth={true}
+                spy={true}
+                duration={1500}
+                offset={-65}
+                className={classes.navLink}
+            >
+                Projects
+            </Link>
+        
+            <Link to='contact'
+                smooth={true}
+                spy={true}
+                duration={1500}
+                offset={-65}
+                className={classes.navLink}
+            >
+                Contact
+            </Link>
+                   
 
-        return (
-            <nav className={this.state.scrolled ? [classes.toolbar, classes.scrolled].join(' ') : classes.toolbar } id="toolbar">
-                <div className={classes.dropdownToggle}>
-                    <DropdownBtn openDropdown={this.toggleDropdown}
-                                 toggle={this.state.dropdown}/>
-                </div>
-                <div className={classes.navItems}>
-                    <NavigationItems/>
-                </div>
-                    <Dropdown toggle = {this.state.dropdown}
-                              closeDropdown = {this.toggleDropdown}/>
-
-            </nav>
-        );
-    }
-}
+        </nav>
+    );
+};
 
 export default Toolbar;
+

@@ -6,7 +6,6 @@ import './ContactModal.css';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import { Row, Col } from 'react-bootstrap';
-import mapPlaceholder from '../../../images/mapPlaceholder.png';
 import GoogleMap from '../../GoogleMap/GoogleMap';
 import SocialLinks from '../../Contact/SocialLinks/SocialLinks';
 import Backdrop from '../../Backdrop/Backdrop';

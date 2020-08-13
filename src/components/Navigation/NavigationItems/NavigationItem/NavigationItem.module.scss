@@ -1,11 +1,8 @@
 .navigationItem {
-    margin: 0;
-    display: flex;
-    box-sizing: border-box;
+    background-color: red;
     height: 100%;
-    width: 100%;
-    align-items:center;
-    margin-left: 0px;
+    border: 1px solid yellow;
+
 }
 
 .navigationItem a {
@@ -13,10 +10,10 @@
     text-decoration: none;
     height: 100%;
     width: 100%;
-    padding: 16px 50px;
     box-sizing: border-box;
     display: block;
     border-bottom: 4px solid transparent;
+    font-size: 1.5rem;
 }
 
 .navigationItem a:hover,

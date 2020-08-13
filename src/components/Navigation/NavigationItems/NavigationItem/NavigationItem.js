@@ -1,7 +1,7 @@
 import React from 'react';
 /* import { NavLink } from 'react-router-dom'; */
 import { Link } from 'react-scroll';
-import classes from './navigationItem.module.css';
+import classes from './NavigationItem.module.scss';
 
 
 const NavigationItem = (props) => {
