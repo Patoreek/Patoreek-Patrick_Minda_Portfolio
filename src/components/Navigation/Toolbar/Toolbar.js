@@ -59,7 +59,7 @@ const Toolbar = () => {
                 smooth={true}
                 spy={true}
                 duration={1500}
-                offset={90}
+                offset={100}
                 className={classes.navLink}
             >
                 Skills

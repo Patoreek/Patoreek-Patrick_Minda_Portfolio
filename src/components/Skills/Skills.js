@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 import classes from './Skills.module.scss';
 
 import { FaReact,
@@ -20,6 +23,13 @@ import { DiJavascript,
          DiPhotoshop,
          DiGit
         } from 'react-icons/di';
+
+
+import {ReactComponent as CommunincationLogo} from '../../images/talk.svg';
+import {ReactComponent as ProblemSolveLogo} from '../../images/idea.svg';
+import {ReactComponent as LearnLogo} from '../../images/learn.svg';
+import {ReactComponent as SelfManageLogo} from '../../images/selfManage.svg';
+
 
 const Skills = () => {
 
@@ -95,7 +105,10 @@ const Skills = () => {
                     <h2>Skills</h2>
                 </div>
                 
-                <div className={classes.cubeContainer}>
+                <div className={classes.cubeContainer}
+                    data-aos="zoom-in-right"
+                    data-aos-delay="200"
+                    data-aos-duration="1250">
                     <div className={classes.scene}>
                         <div class={`${classes.cube} ${classFace}`}>
                             <div class={`${classes.cubeFace} ${classes.faceFront}`}>
@@ -138,15 +151,24 @@ const Skills = () => {
                     </div>
                 </div>       
 
-                <div className={`${classes.prevBtn}`}>
+                <div className={`${classes.prevBtn}`}
+                    data-aos="fadeIn"
+                    data-aos-delay="1000"
+                    data-aos-duration="750">
                     <button className={`${classes.btn}`} onClick={prevBtnHandler}><span className={classes.btnIcon}> &#8592; </span></button>
                 </div>
 
-                <div className={`${classes.nextBtn}`}>
+                <div className={`${classes.nextBtn}`}
+                    data-aos="fadeIn"
+                    data-aos-delay="1000"
+                    data-aos-duration="750">
                     <button className={`${classes.btn}`} onClick={nextBtnHandler}><span className={classes.btnIcon}> &#8594; </span></button>
                 </div>
 
-                <div className={classes.skillsBoxGridCell}>
+                <div className={classes.skillsBoxGridCell}
+                    data-aos="fade-up"
+                    data-aos-delay="1500"
+                    data-aos-duration="1000">
                     <div className={classes.skillsBoxContainer}>
                     <div className={classes.skillsBoxHeader}>
                         {face === 1 && (
@@ -246,6 +268,54 @@ const Skills = () => {
                         )}
                     </div>
                 </div>
+                </div>
+        
+                <div className={classes.traitsContainer}
+                data-aos="fadeIn"
+                data-aos-delay="500"
+                data-aos-duration="1000">
+                    <div className={classes.traitsBox1}>
+                           <h3 className={classes.traitHeader}>Communication</h3>
+                           <p className={classes.traitDescription}>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
+                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                            </p>
+                            <CommunincationLogo className={classes.traitLogo}/>
+
+                    </div>                
+
+                    <div className={classes.traitsBox2}>
+                        <h3 className={classes.traitHeader}>Problem Solving</h3>
+                           <p className={classes.traitDescription}>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
+                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                            </p>
+                            <ProblemSolveLogo className={classes.traitLogo}/>
+                    </div>
+                    <div className={classes.traitsBox3}>
+                        <h3 className={classes.traitHeader}>Self-Managable</h3>
+                           <p className={classes.traitDescription}>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
+                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                            </p>
+                            <SelfManageLogo className={classes.traitLogo}/>
+                    </div>
+                    <div className={classes.traitsBox4}>
+                        <h3 className={classes.traitHeader}>Desire to learn</h3>
+                           <p className={classes.traitDescription}>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
+                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
+                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                            </p>
+                            <LearnLogo className={classes.traitLogo}/>
+                    </div>
                 </div>
         </div>
     );
