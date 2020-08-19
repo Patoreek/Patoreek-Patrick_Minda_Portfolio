@@ -70,7 +70,7 @@ const Toolbar = () => {
                 smooth={true}
                 spy={true}
                 duration={1500}
-                offset={-65}
+                offset={100}
                 className={classes.navLink}
             >
                 Projects

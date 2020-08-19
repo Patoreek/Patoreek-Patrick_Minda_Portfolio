@@ -36,18 +36,21 @@ const Bio = () => {
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-duration="1200">
-                <h2 className={classes.bioHeader}>Bio Header</h2>
+                <h2 className={classes.bioHeader}>Who am I?</h2>
             </div>
 
             <div className={classes.firstParagraphContainer}
                 data-aos="fade-right"
                 data-aos-delay="500"
                 data-aos-duration="1000">
-                <h3 className={classes.firstHeader}>Smaller title</h3>
+                <h3 className={classes.firstHeader}>Dedicated self-taught developer</h3>
                 <p className={classes.paragraph}> 
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nihil placeat hic ex!
-                    Ex suscipit repellat laborum possimus, provident nobis accusantium mollitia nemo. 
-                    Similique adipisci, cupiditate porro aspernatur optio mollitia.
+                    I am passionate about science and technology. My curiousity to the the powerful technology allowed me to
+                    independantly further my knowledge and understanding in the world of web development. I continiously search
+                    for greater and complex tasks. I enjoy being hands on and understanding the functionality of all systems whether its,
+                    software, hardware, business, the mind and life.
+
+
                 </p>
             </div>
 
@@ -55,10 +58,11 @@ const Bio = () => {
                 data-aos="fade-right"
                 data-aos-delay="500"
                 data-aos-duration="1000">
-                <h3 className={classes.secondHeader}>Smaller title</h3>
+                <h3 className={classes.secondHeader}>Enjoy the little things</h3>
                 <p className={classes.paragraph}> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur doloribus architecto deserunt
-                neque. Esse, cumque? Quaerat adipisci aut magnam.
+                I enjoy hanging out, trying new things in terms of activities, food and places. I enjoy electronic music
+                and am always attracted to learning and understanding new things to broaden my life experiences.
+
                 </p>
             </div>
 

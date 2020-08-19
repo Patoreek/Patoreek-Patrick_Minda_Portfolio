@@ -7,7 +7,6 @@ import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import { Row, Col } from 'react-bootstrap';
 import GoogleMap from '../../GoogleMap/GoogleMap';
-import SocialLinks from '../../Contact/SocialLinks/SocialLinks';
 import Backdrop from '../../Backdrop/Backdrop';
 
 const CustomModal = (props) => {
@@ -69,7 +68,6 @@ const CustomModal = (props) => {
                 <Row>
                     <Col>
                     <p className={classes.availableTxt}>Available via</p>
-                    <SocialLinks styleLinks={styleForLinks}/>
                     </Col>
                 </Row>
                 </Modal.Body>

@@ -228,42 +228,36 @@ const Skills = () => {
                             </div>
                         )}
                     <div class = {classes.descriptionContainer}>
-                        {face === 1 && (
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ex facilis inventore
-                             doloribus harum? Blanditiis, asperiores! Dolores temporibus suscipit, laborum, 
-                             fugiat vero atque deserunt corrupti rem minus blanditiis distinctio optio!
+                        {face === 1 && ( //* FRONTEND DESCRIPTION
+                        <p>
+                            Ability to design and style websites with React as my preferred framework. I take advantage of packages available 
+                            for the framework to further my projects. Able to connect to a REST API and build complex applications.
+                             Always learning new styling techniques.
                         </p> 
                         )}
-                        {face === 2 && (
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Expedita reiciendis cupiditate tempora porro ad asperiores aspernatur,
-                             vel excepturi illum veritatis error provident saepe voluptatibus repellat
-                              natus neque iste ipsam ut?
+                        {face === 2 && ( //* BACKEND DESCRIPTION
+                        <p>Experience in both SQL and MongoDB. Node.js being the preffered technology but also have experience in PHP.
+                            Express.js and Mongoose to build sophisicated MERN applications. Experience in REST and GraphQL.
                         </p> 
                         )}
-                        {face === 3 && (
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit 
-                            laboriosam ipsa odio repellat facere, ducimus ab eos iste id quas mollitia dolore
-                             in. Odit aut odio cumque possimus dolores?
+                        {face === 3 && ( //* SASS DESCRIPTION
+                        <p>Consistantly learning more techniques and skills to design and style my website cleaner and more gorgeous than ever before.
+                            Using all the most up to date techniques such as Sass, flexbox, and CSS grids.
                         </p> 
                         )}
-                        {face === 4 && (
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam 
-                            repellendus nam asperiores, eum id accusantium culpa mollitia autem
-                             delectus nulla laudantium ab sit, adipisci amet porro in cupiditate quas iste.
+                        {face === 4 && ( //* DESIGN DESCRIPTION
+                        <p>Experience in both Photoshop and Figma. Know my way around the applications to create whatever I imagine. 
+                            Comfortable using these software for my design needs.
                         </p> 
                         )}
-                        {face === 5 && (
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat
-                             unde iure necessitatibus adipisci natus nulla repudiandae? Laudantium
-                              quibusdam quod vitae vel. Necessitatibus dolore provident nam soluta? Aperiam, 
-                              suscipit laboriosam?
+                        {face === 5 && ( //* VERSION CONTROL DESCRIPTION
+                        <p>Ability to use Git and Github for version control.
                         </p> 
                         )}
-                        {face === 6 && (
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti impedit nobis incidunt
-                             quia corporis earum ipsum quaerat architecto reprehenderit accusantium possimus illum 
-                             nostrum modi delectus quo, magnam optio quis distinctio.
+                        {face === 6 && ( //* WORDPRESS DESCRIPTION
+                        <p>Experience building custom Wordpress themes. 
+                            Comfortable navigating and using PHP and all of Wordpress functionalities.
+                            Powerful and an enjoyable technology.
                         </p> 
                         )}
                     </div>
@@ -277,10 +271,8 @@ const Skills = () => {
                     <div className={classes.traitsBox1}>
                            <h3 className={classes.traitHeader}>Communication</h3>
                            <p className={classes.traitDescription}>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
-                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                                Clear and Precise communication. I make to that I understand what is being conveyed.
+                                Great at listening and effectively follow instructions. Able to be a team player.
                             </p>
                             <CommunincationLogo className={classes.traitLogo}/>
 
@@ -289,30 +281,27 @@ const Skills = () => {
                     <div className={classes.traitsBox2}>
                         <h3 className={classes.traitHeader}>Problem Solving</h3>
                            <p className={classes.traitDescription}>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
-                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                               Enjoy the challenges of difficult problems. Able to think outside the box and find
+                               solutions in a timely manner. Consistent learning allows more complex problems to solve
+                               which help builds this skill.
                             </p>
                             <ProblemSolveLogo className={classes.traitLogo}/>
                     </div>
                     <div className={classes.traitsBox3}>
                         <h3 className={classes.traitHeader}>Self-Managable</h3>
                            <p className={classes.traitDescription}>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
-                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                               Able to work independantly. Self-learn and put in extra work to create projects that are
+                               to the best of my ability. Can manage my time effectively and keep on top of tasks.
+                               
                             </p>
                             <SelfManageLogo className={classes.traitLogo}/>
                     </div>
                     <div className={classes.traitsBox4}>
                         <h3 className={classes.traitHeader}>Desire to learn</h3>
                            <p className={classes.traitDescription}>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus 
-                               accusamus. Suscipit corrupti tenetur consectetur. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero. Id, ullam, sit dolore explicabo 
-                               fugit totam asperiores quidem sapiente debitis quisquam, nemo deserunt vero.
+                                Learning new technologies and building projects allows for my skillset as
+                                a web developer to sharpen. I always strive to learn the latest and greatest techniques from all
+                                aspects of web development.
                             </p>
                             <LearnLogo className={classes.traitLogo}/>
                     </div>

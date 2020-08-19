@@ -2,16 +2,15 @@
 
 .bio {
     width: 100vw;
-    height:93vh; 
+    height:100vh; 
     /* background: radial-gradient(circle, rgba(27,83,255,1) 0%, rgba(5,52,227,1) 100%); */
     /*background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(8,8,8,1) 100%); */
     background-image: linear-gradient(rgba(32, 94, 148, 0.9),
     rgba(1, 29, 53, 0.9)), 
     url('../../images/cosmos.jpg');
-    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
     z-index: 1;
     overflow: hidden;
-    padding: 4rem 8rem;
+    padding: 4rem 8rem 8rem 8rem;
 
     display: grid;
     grid-template-rows: .5fr repeat(2, max-content);

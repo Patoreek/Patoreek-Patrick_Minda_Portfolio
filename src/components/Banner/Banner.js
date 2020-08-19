@@ -7,6 +7,9 @@ import video from '../../videos/LPageOpt.mp4';
 import { ReactComponent as ChatIcon } from '../../images/bubbles3.svg';
 import { ReactComponent as DownloadIcon } from '../../images/file-text2.svg';
 
+import { Link } from 'react-scroll';
+
+import ResumePDF from '../../resume/Patrick_Minda_Resume_Portfolio.pdf';
 
 import classes from './Banner.module.scss';
 
@@ -59,15 +62,26 @@ const Banner = () => {
                 <div className={classes.buttonsContainer}>
             
                         <div className={classes.buttonLabel}><span>Contact me</span></div>
-                        <div className={classes.contactButton} onClick={modalHandler}>
+                        {/* <div className={classes.contactButton} onClick={modalHandler}>
                             <ChatIcon className={classes.icon}/>
-                        </div>
+                        </div> */}
+                        <Link to='contact'
+                            smooth={true}
+                            spy={true}
+                            duration={1500}
+                            offset={100}
+                            className={classes.contactButton}
+                        >
+                              <ChatIcon className={classes.icon}/>
+                        </Link>
                  
                     
                         <div className={classes.buttonLabel}><span>Resume PDF</span></div>
+                        <a href={ResumePDF} target="_blank" rel="noopener noreferrer" download>
                         <div className={classes.downloadButton}>
                             <DownloadIcon className={classes.icon}/>
                         </div>
+                        </a>
                     
                 </div>
             </div>

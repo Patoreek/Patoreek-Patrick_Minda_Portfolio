@@ -34,8 +34,26 @@ body {
     width: 100vw;
     overflow-x: hidden;
 
+    -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
     @include respond(tab-port){ 
         padding: 0;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+    //border: 1px solid rgb(0, 255, 0);
+    -webkit-text-fill-color: rgb(23, 23, 23);
+    -webkit-box-shadow: 0 0 0px 1000px rgba(171, 31, 31, 0) inset;
+    transition: background-color 5000s ease-in-out 0s;
     }
 
 

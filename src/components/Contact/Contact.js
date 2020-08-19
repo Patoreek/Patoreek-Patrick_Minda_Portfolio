@@ -1,93 +1,92 @@
-import React, { Component } from 'react';
 
-import { Row,
-         Col
-        } from 'react-bootstrap';
+import React from 'react';
 
-import classes from './Contact.module.css';
+import classes from './Contact.module.scss';
 
-import ContactForm from "./ContactForm/ContactForm";
-import SocialLinks from "./SocialLinks/SocialLinks";
-import PhoneSVG from './PhoneSVG/PhoneSVG';
-import GoogleMap from '../GoogleMap/GoogleMap';
+import { 
+    FaLinkedin,
+    FaGithubSquare,  
+} from 'react-icons/fa';
 
-class Contact extends Component {
+import {
+    IoIosMail,
+    IoIosArrowDropup,
+    IoIosArrowDropupCircle
+} from 'react-icons/io';
 
-
-    render() {
-
-        const styleForLinks = {
-            width: '90%',
-            height:'8vh',
-            backgroundColor: 'white',
-            borderRadius: '5px',
-            boxShadow: '10px 10px 20px',
-            padding: '0vh 0vw 0vh 0vw',
-            display: 'inline-block',
-            textAlign: 'center',
-            margin: '0px 0vw 0px 1.5vw'
-        }
-
-        const styleForMaps = {
-            width: '90%',
-            height: '85%',
-            margin: '8vh 0px 0px 0px',
-            borderRadius: '15px'
-          }
+import { Link } from 'react-scroll';
 
 
-        return (
-            <div className={classes.contact} id="contact">
-                <div className={classes.contactBgText}>Contact</div>
-                <h1 className={classes.contactHeader}
-                    data-aos="zoom-in"
-                    data-aos-delay="200"
-                    data-aos-duration="1000"> Get in touch with me</h1>
-                <Row>
-                    <Col lg>
-                        <div data-aos="zoom-out"
-                            data-aos-delay="200"
-                            data-aos-duration="1000"
-                            className={classes.phoneSVG}>
-                            <PhoneSVG/>
+const Contact = () => {
+
+
+
+    return (
+        <div className={classes.contact} id="contact">
+                <div className={classes.headerContainer}>
+                    <h1 className={classes.contactHeader}> Get in touch with me</h1>
+                </div>
+
+                <div className={classes.formContainer}>
+                    <h2 className={classes.formContainer__header}> Send a message</h2>
+
+                    <form className={classes.form}>
+                       
+                                <input  type="text" 
+                                        name="name" 
+                                        placeholder="Name"
+                                        className={classes.form__nameInput} />
+                    
+
+                       
+                            <input  type="email"
+                                    name="email"  
+                                    placeholder="Email"
+                                    className={classes.form__emailInput} />
+                    
+                            <textarea   className={classes.form__messageInput}
+                                        placeholder="Message">
+                            </textarea>
+                       
+                        <input type="submit" value="Send Message" className={classes.form__submit} />
+                    </form>
+
+                    <div className={classes.image}>
+                        <div className={classes.links}>
+                            <a href="https://www.linkedin.com/in/patrick-minda-2318a5143/"  target="_blank" rel="noreferrer noopener">
+                                <FaLinkedin className={classes.links__linkedInIcon} />
+                            </a>
+                            <a href="https://github.com/Patoreek" target="_blank" rel="noreferrer noopener" >
+                            <FaGithubSquare className={classes.links__githubIcon} />
+                            </a>
+                            <a href="mailto:patrick.minda@hotmail.com">
+                            <IoIosMail className={classes.links__emailIcon} />
+                            </a>
                         </div>
-                        <p className={classes.findMeText}
-                           data-aos="fade"
-                           data-aos-delay="200"
-                           data-aos-duration="1000"
-                           data-aos-offset="0"
-                           data-aos-anchor-placement="top-bottom">You can find me on</p>
-                           
-                           <div data-aos="fade-up-right"
-                            data-aos-delay="300"
-                            data-aos-duration="1000"
-                            data-aos-offset="0"
-                            data-aos-anchor-placement="top-bottom">
-                            <SocialLinks styleLinks={styleForLinks}/>
-                            </div> 
-        
-                    </Col>
-                    <Col lg>
-                        <p className={classes.sendEnquiryText}
-                            data-aos="fade"
-                            data-aos-delay="200"
-                            data-aos-duration="800">Send me a message down below</p>
-                        <div data-aos="zoom-in"
-                             data-aos-delay="200"
-                             data-aos-duration="1000">
-                            <ContactForm/>
-                        </div>
-                    </Col>
-                    <Col lg>
+
+                        <h4 className={classes.image__collabText}>Interested in collaborating?</h4>
+                        <h4 className={classes.image__newDev}>Searching for a new developer?</h4>
+                    </div>
+
+                </div>
+
+                <div className={classes.topBtnContainer}>
+                    <div className={classes.topBtnBg}>
+                        <Link to='banner'
+                            smooth={true}
+                            spy={true}
+                            duration={1500}
+                            offset={0}
+                        >
+                        <IoIosArrowDropup className={classes.topBtn}/>
+                        </Link>
+                    </div>
+                </div>
+
                         
-                                <GoogleMap style={styleForMaps}/>
-                        
-                        
-                    </Col>
-                </Row>
+
             </div>
-        );
-    }
-}
+    );
+};
 
 export default Contact;
