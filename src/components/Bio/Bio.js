@@ -34,6 +34,7 @@ const Bio = () => {
 
 
     return (
+        <div className={classes.bioBg}>
         <div className={scrolled ? [classes.bio, classes.scrolled].join(' ') : classes.bio } id="bio">
             <div className={classes.bioHeaderContainer}
               data-aos="fade-up"
@@ -60,7 +61,8 @@ const Bio = () => {
             <div className={classes.secondParagraphContainer}
                 data-aos="fade-right"
                 data-aos-delay="500"
-                data-aos-duration="1000">
+                data-aos-duration="1000"
+                data-aos-offset="-100">
                 <h3 className={classes.secondHeader}>Enjoy the little things</h3>
                 <p className={classes.paragraph}> 
                 I enjoy hanging out, trying new things in terms of activities, food and places. I enjoy electronic music
@@ -71,14 +73,12 @@ const Bio = () => {
 
             <div className={classes.attributesContainer}
                 data-aos="zoom-in"
-                data-aos-delay="1000"
+                data-aos-delay="600"
                 data-aos-duration="1000">
                 <h3 className={classes.attributesHeader}> Attributes </h3> 
                     <ul className={classes.attributesList}>
                         <li>Speak and understand a second language - Polish</li>
                         <li>Persistent</li>
-                        <li>Commonsense approach to customers</li>
-                        <li>Positive self esteem</li>
                         <li>Good sense of humour</li>
                         <li>Loyal and reliable</li>
                         <li>Honest and enthusiastic</li>
@@ -88,7 +88,8 @@ const Bio = () => {
                     </ul>
             </div>
 
-            <NextBtn linkTo="skills"/>
+            <NextBtn linkTo="skills" offset={175} scrollOffset={45}/>
+        </div>
         </div>
     );
 };

@@ -15,14 +15,21 @@ import {
     DiGithubBadge
 } from 'react-icons/di';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 const Projects = () => {
     return (
+        <div className={classes.projectsBg}>
         <div className={classes.projectsContainer} id="projects">
             <h3 className={classes.projectsHeader}>Projects</h3>
             <div className={classes.cardsContainer}>
 
                  {/* LOCUS CARD */}
-                <div className={classes.card}>
+                <div className={classes.card}
+                    data-aos="flip-up"
+                    data-aos-delay="100"
+                    data-aos-duration="1000">
                     <div className={classes.card__Front}>
                         <div className={`${classes.imageContainer} ${classes.imageContainer__red}`}>
                             <img src={image1}></img>
@@ -69,7 +76,10 @@ const Projects = () => {
 
 
                  {/* BRIGHTE CARD */}
-                <div className={classes.card}>
+                <div className={classes.card}
+                        data-aos="flip-up"
+                        data-aos-delay="300"
+                        data-aos-duration="1000">
                     <div className={classes.card__Front}>
                     <div className={`${classes.imageContainer} ${classes.imageContainer__blue}`}>
                             <img src={image2}></img>
@@ -116,7 +126,10 @@ const Projects = () => {
 
 
                 {/* MOMENTO CARD */}
-                <div className={classes.card}>
+                <div className={classes.card}
+                        data-aos="flip-up"
+                        data-aos-delay="500"
+                        data-aos-duration="1000">
                     <div className={classes.card__Front}>
                     <div className={`${classes.imageContainer} ${classes.imageContainer__green}`}>
                             <img src={image3}></img>
@@ -172,8 +185,9 @@ const Projects = () => {
                 <a href="https://github.com/Patoreek?tab=repositories" target="_blank" rel="noreferrer noopener" className={classes.moreProjectsBtn}><span>See more projects</span></a>
             </div>
 
-            <NextBtn linkTo="contact"/>
+            <NextBtn linkTo="contact" offset={100} />
 
+        </div>
         </div>
     );
 };

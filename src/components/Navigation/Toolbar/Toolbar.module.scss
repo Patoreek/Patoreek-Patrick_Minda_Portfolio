@@ -1,5 +1,19 @@
 @import '../../../sass/abstracts/variables';
 
+.invisNav {
+    height:7vh;
+    width:100vw;
+    /* top: 6500; */
+    left: 0;
+    background-color: $color-blue-dark;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
 .toolbar {
     height:7vh;
     width:100vw;

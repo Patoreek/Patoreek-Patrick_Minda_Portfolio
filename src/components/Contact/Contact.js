@@ -15,36 +15,59 @@ import {
 
 import { Link } from 'react-scroll';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+import emailjs from 'emailjs-com';
+
+
+
 
 const Contact = () => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('gmail_patrick', 'Portfolio Email Template', e.target, 'user_wGoVRA0NWKDdlPkrp6XbF')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
 
 
 
     return (
+        <div className={classes.contactBg}>
         <div className={classes.contact} id="contact">
                 <div className={classes.headerContainer}>
                     <h1 className={classes.contactHeader}> Get in touch with me</h1>
                 </div>
 
-                <div className={classes.formContainer}>
+                <div className={classes.formContainer}
+                  data-aos="fadeIn"
+                  data-aos-delay="300"
+                  data-aos-duration="1000">
                     <h2 className={classes.formContainer__header}> Send a message</h2>
 
-                    <form className={classes.form}>
+                    <form className={classes.form} onSubmit={sendEmail}>
                        
                                 <input  type="text" 
-                                        name="name" 
+                                        name="user_name"
                                         placeholder="Name"
                                         className={classes.form__nameInput} />
                     
 
                        
                             <input  type="email"
-                                    name="email"  
+                                    name="user_email"  
                                     placeholder="Email"
                                     className={classes.form__emailInput} />
                     
                             <textarea   className={classes.form__messageInput}
-                                        placeholder="Message">
+                                        placeholder="Message"
+                                        name="message">
                             </textarea>
                        
                         <input type="submit" value="Send Message" className={classes.form__submit} />
@@ -85,6 +108,7 @@ const Contact = () => {
                         
 
             </div>
+        </div>
     );
 };
 

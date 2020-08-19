@@ -1,102 +1,109 @@
 @import '../../sass/abstracts/variables';
 
-.bio {
-    width: 100vw;
-    height:100vh; 
-    /* background: radial-gradient(circle, rgba(27,83,255,1) 0%, rgba(5,52,227,1) 100%); */
-    /*background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(8,8,8,1) 100%); */
+.bioBg {
     background-image: linear-gradient(rgba(32, 94, 148, 0.9),
     rgba(1, 29, 53, 0.9)), 
     url('../../images/cosmos.jpg');
-    z-index: 1;
-    overflow: hidden;
-    padding: 4rem 8rem 8rem 8rem;
+    position: relative;
 
-    display: grid;
-    grid-template-rows: .5fr repeat(2, max-content);
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 4rem;
-    position:relative;
-
-    .bioHeaderContainer {
-        grid-column: 1 / -1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .bioHeader {
-            font-size: 10rem;
-            color: white;
-            font-family: $font-header;
-            text-transform: uppercase;
-        }
-    }
-
-    .firstParagraphContainer {
-        //background-color: red;
-        grid-row: 2 / 3;
-        grid-column: 1 / span 2;
-
-        .firstHeader {
-            color: white;
-            font-size: 4rem;
-            text-transform: uppercase;
-            font-family: $font-header;
-
-        }
-        .paragraph {
-            color: white;
-            font-size: 2rem;
-            font-family: $font-paragraph;
-            font-weight: 400;
-        }
-    }
-
-    .secondParagraphContainer {
-        //background-color: green;
-        grid-row: 3 / 4;
-        grid-column: 1 / span 2;
-
-        .secondHeader {
-            color: white;
-            font-size: 4rem;
-            text-transform: uppercase;
-            font-family: $font-header;
-        }
-        .paragraph {
-            color: white;
-            font-size: 2rem;
-            font-family: $font-paragraph;
-            font-weight: 400;
-        }
-    }
-
-        .attributesContainer {
-        //background-color: green;
-        grid-row: 2 / span 2;
-        grid-column: 4 / span 2;
-
-
-        .attributesHeader {
-            color: white;
-            font-size: 4rem;
-            text-transform: uppercase;
-            font-family: $font-header;
-        }
-        .attributesList {
-            color: white;
-            font-size: 2rem;
-            font-family: $font-paragraph;
-            font-weight: 400;
-
-            li {
-                padding: .5rem 0rem;
+    .bio {
+        width: 100vw;
+        min-height: 110vh;
+        max-width: 1400px;
+        margin: 0 auto;
+        height:auto; 
+        z-index: 1;
+        overflow: hidden;
+        padding: 4rem 8rem 18rem 8rem;
+    
+        display: grid;
+        grid-template-rows: .5fr repeat(2, max-content);
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2rem;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    
+        .bioHeaderContainer {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .bioHeader {
+                font-size: 6rem;
+                color: white;
+                font-family: $font-header;
+                text-transform: uppercase;
             }
         }
+    
+        .firstParagraphContainer {
+            //background-color: red;
+            grid-row: 2 / 3;
+            grid-column: 1 / span 2;
+    
+            .firstHeader {
+                color: white;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                font-family: $font-header;
+    
+            }
+            .paragraph {
+                color: white;
+                font-size: 1.6rem;
+                font-family: $font-paragraph;
+                font-weight: 400;
+            }
+        }
+    
+        .secondParagraphContainer {
+            //background-color: green;
+            grid-row: 3 / 4;
+            grid-column: 1 / span 2;
+    
+            .secondHeader {
+                color: white;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                font-family: $font-header;
+            }
+            .paragraph {
+                color: white;
+                font-size: 1.6rem;
+                font-family: $font-paragraph;
+                font-weight: 400;
+            }
+        }
+    
+            .attributesContainer {
+            //background-color: green;
+            grid-row: 2 / span 2;
+            grid-column: 4 / span 2;
+    
+    
+            .attributesHeader {
+                color: white;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                font-family: $font-header;
+            }
+            .attributesList {
+                color: white;
+                font-size: 1.6rem;
+                font-family: $font-paragraph;
+                font-weight: 400;
+    
+                li {
+                    padding: .5rem 0rem;
+                }
+            }
+        }
+    
+    
+    
     }
-
-
-
 }
 
 .scrolled {

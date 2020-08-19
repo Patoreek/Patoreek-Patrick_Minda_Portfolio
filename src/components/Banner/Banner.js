@@ -86,7 +86,7 @@ const Banner = () => {
                     
                 </div>
 
-                <NextBtn linkTo="bio"/>
+                <NextBtn linkTo="bio" scrollOffset={-20}/>
 
             </div>
     );
