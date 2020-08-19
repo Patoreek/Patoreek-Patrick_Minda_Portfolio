@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import ReactTypingEffect from 'react-typing-effect';
 import ContactModal from '../Modals/ContactModal/ContactModal';
+import NextBtn from '../NextBtn/NextBtn';
 
 import video from '../../videos/LPageOpt.mp4';
 import { ReactComponent as ChatIcon } from '../../images/bubbles3.svg';
@@ -84,6 +85,9 @@ const Banner = () => {
                         </a>
                     
                 </div>
+
+                <NextBtn linkTo="bio"/>
+
             </div>
     );
 };

@@ -11,7 +11,6 @@ import {
 import {
     IoIosMail,
     IoIosArrowDropup,
-    IoIosArrowDropupCircle
 } from 'react-icons/io';
 
 import { Link } from 'react-scroll';

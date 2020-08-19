@@ -6,6 +6,8 @@ import image1 from '../../images/Opera-house.jpg';
 import image2 from '../../images/sydney-harbour.jpg';
 import image3 from '../../images/Beach-path.jpg';
 
+import NextBtn from '../NextBtn/NextBtn';
+
 import  { ReactComponent as LiveSVG } from '../../images/live.svg';
 
 import {
@@ -169,6 +171,8 @@ const Projects = () => {
             <div className={classes.moreBtnContainer}>
                 <a href="https://github.com/Patoreek?tab=repositories" target="_blank" rel="noreferrer noopener" className={classes.moreProjectsBtn}><span>See more projects</span></a>
             </div>
+
+            <NextBtn linkTo="contact"/>
 
         </div>
     );

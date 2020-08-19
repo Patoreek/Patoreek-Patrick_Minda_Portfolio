@@ -16,6 +16,7 @@
     grid-template-rows: .5fr repeat(2, max-content);
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 4rem;
+    position:relative;
 
     .bioHeaderContainer {
         grid-column: 1 / -1;

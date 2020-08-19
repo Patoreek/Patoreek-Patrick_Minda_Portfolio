@@ -1,0 +1,76 @@
+@import '../../sass/abstracts/variables';
+
+.nextBtnContainer {
+     //background-color: red;
+     margin: 5rem 0rem;
+     //flex: 1 0 100%;
+     display: flex;
+     justify-content: center;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+
+     .nextBtnBg{
+         //background-color: pink;
+         border-radius: 50%;
+         position: relative;
+         
+         transition: all .2s ease;
+
+         &:hover {
+             transform: scale(1.2);
+         }
+
+         &::before {
+             content: '';
+             display: block;
+             position: absolute;
+             top: 40%;
+             left: 45%;
+             width: 0%;
+             height: 0%;
+             border-radius: 50%;
+
+             background-color: $color-blue;
+             transition: all .2s ease;
+         }
+         
+         &:hover::before {
+             top: 10%;
+             left: 10%;
+             width: 80%;
+             height: 80%;
+         }
+
+        //  &:after {
+        //      content: 'Back to top';
+        //      font-size: 2rem;
+        //      display: block;
+        //      position: absolute;
+        //      width: 150%;
+        //      transform: translateX(-1.5rem) translateY(2rem);
+        //      height: auto;
+        //      color: white;
+        //      //background-color: $color-blue;
+        //      transition: all .2s ease;
+
+        //      opacity: 0%;
+        //  }
+
+        //  &:hover::after {
+        //      opacity: 100%;
+        //      transform: translateX(-1.5rem) translateY(0rem);
+        //  }
+
+
+
+         .nextBtn {
+             //background-color: orange;
+             border-radius: 50%;
+             font-size: 7rem;
+             color: white;
+             position: relative;
+         }
+     }
+ }

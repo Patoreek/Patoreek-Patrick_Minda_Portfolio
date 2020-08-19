@@ -3,6 +3,9 @@ import classes from './Bio.module.scss';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+import NextBtn from '../NextBtn/NextBtn';
+
 // ..
 AOS.init();
 
@@ -84,6 +87,8 @@ const Bio = () => {
                         <li>Able to solve problems effectively</li>
                     </ul>
             </div>
+
+            <NextBtn linkTo="skills"/>
         </div>
     );
 };

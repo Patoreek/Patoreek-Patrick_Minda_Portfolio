@@ -30,6 +30,8 @@ import {ReactComponent as ProblemSolveLogo} from '../../images/idea.svg';
 import {ReactComponent as LearnLogo} from '../../images/learn.svg';
 import {ReactComponent as SelfManageLogo} from '../../images/selfManage.svg';
 
+import NextBtn from '../NextBtn/NextBtn';
+
 
 const Skills = () => {
 
@@ -306,6 +308,8 @@ const Skills = () => {
                             <LearnLogo className={classes.traitLogo}/>
                     </div>
                 </div>
+
+                <NextBtn linkTo="projects" color="#0A0A0A"/>
         </div>
     );
 };
