@@ -314,7 +314,7 @@ const Skills = () => {
                         </div>
                     </div>
 
-                    <NextBtn linkTo="projects" color="#0A0A0A" offset={125} scrollOffset={140}/>
+                    <NextBtn linkTo="projects" color="#9b9b9b" offset={125} scrollOffset={140}/>
             </div>
         </div>
     );

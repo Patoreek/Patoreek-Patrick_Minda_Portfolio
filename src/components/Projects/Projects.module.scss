@@ -44,7 +44,7 @@
     
             display: grid;
     
-            grid-template-rows: minmax(30rem, 1fr);
+            grid-template-rows: minmax(30rem, 45rem);
             grid-template-columns: repeat(3, minmax(20rem, 30rem));
             align-items: center;
             justify-items: center;
@@ -76,7 +76,7 @@
             &__Back {
                 transform: rotateY(180deg); //! change this back to 180deg
                 display: grid;
-                grid-template-rows: 1fr .25fr .3fr;
+                grid-template-rows: 1fr max-content max-content;
     
                 &__red {
                     background-image: linear-gradient(to bottom right, $color-1, $color-1-light);
@@ -143,6 +143,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin: 1rem 0rem;
     
                     .githubBtn {
                         background-color: $color-white;
@@ -220,6 +221,8 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    margin: 1rem 0rem 2rem 0rem;
+
     
                     .liveBtn {
                         background-color: $color-white;
