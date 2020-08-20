@@ -24,6 +24,11 @@ import { DiJavascript,
          DiGit
         } from 'react-icons/di';
 
+import { 
+    IoIosArrowForward,
+    IoIosArrowBack
+    } from 'react-icons/io';
+
 
 import {ReactComponent as CommunincationLogo} from '../../images/talk.svg';
 import {ReactComponent as ProblemSolveLogo} from '../../images/idea.svg';
@@ -158,14 +163,14 @@ const Skills = () => {
                         data-aos="fadeIn"
                         data-aos-delay="1000"
                         data-aos-duration="750">
-                        <button className={`${classes.btn}`} onClick={prevBtnHandler}><span className={classes.btnIcon}> &#8592; </span></button>
+                        <button className={`${classes.btn}`} onClick={prevBtnHandler}><span className={classes.btnIcon}><IoIosArrowBack className={classes.prevIcon}/></span></button>
                     </div>
 
                     <div className={`${classes.nextBtn}`}
                         data-aos="fadeIn"
                         data-aos-delay="1000"
                         data-aos-duration="750">
-                        <button className={`${classes.btn}`} onClick={nextBtnHandler}><span className={classes.btnIcon}> &#8594; </span></button>
+                        <button className={`${classes.btn}`} onClick={nextBtnHandler}><span className={classes.btnIcon}><IoIosArrowForward className={classes.nextIcon}/></span></button>
                     </div>
 
                     <div className={classes.skillsBoxGridCell}
