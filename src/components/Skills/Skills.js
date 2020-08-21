@@ -276,45 +276,45 @@ const Skills = () => {
                     data-aos-delay="750"
                     data-aos-duration="1000">
                         <div className={classes.traitsBox1}>
+                            <CommunincationLogo className={`${classes.traitLogo} ${classes.traitLogo__comm}`}/>
                             <h3 className={classes.traitHeader}>Communication</h3>
                             <p className={classes.traitDescription}>
                                     Clear and Precise communication. I make to that I understand what is being conveyed.
                                     Great at listening and effectively follow instructions. Able to be a team player.
                                 </p>
-                                <CommunincationLogo className={classes.traitLogo}/>
 
                         </div>                
 
                         <div className={classes.traitsBox2}>
+                                <ProblemSolveLogo className={`${classes.traitLogo} ${classes.traitLogo__scaled} ${classes.traitLogo__solve}`}/>
                             <h3 className={classes.traitHeader}>Problem Solving</h3>
                             <p className={classes.traitDescription}>
                                 Enjoy the challenges of difficult problems. Able to think outside the box and find
                                 solutions in a timely manner. Consistent learning allows more complex problems to solve
                                 which help builds this skill.
                                 </p>
-                                <ProblemSolveLogo className={classes.traitLogo}/>
                         </div>
                         <div className={classes.traitsBox3}>
+                                <SelfManageLogo className={`${classes.traitLogo} ${classes.traitLogo__manage}`}/>
                             <h3 className={classes.traitHeader}>Self-Managable</h3>
                             <p className={classes.traitDescription}>
                                 Able to work independantly. Self-learn and put in extra work to create projects that are
                                 to the best of my ability. Can manage my time effectively and keep on top of tasks.
                                 
                                 </p>
-                                <SelfManageLogo className={classes.traitLogo}/>
                         </div>
                         <div className={classes.traitsBox4}>
+                                <LearnLogo className={`${classes.traitLogo} ${classes.traitLogo__scaled} ${classes.traitLogo__learn}`}/>
                             <h3 className={classes.traitHeader}>Desire to learn</h3>
                             <p className={classes.traitDescription}>
                                     Learning new technologies and building projects allows for my skillset as
                                     a web developer to sharpen. I always strive to learn the latest and greatest techniques from all
                                     aspects of web development.
                                 </p>
-                                <LearnLogo className={classes.traitLogo}/>
                         </div>
                     </div>
 
-                    <NextBtn linkTo="projects" color="#9b9b9b" offset={125} scrollOffset={140}/>
+                    <NextBtn linkTo="projects" color="#9b9b9b" offset={50} scrollOffset={140}/>
             </div>
         </div>
     );

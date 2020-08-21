@@ -1,15 +1,23 @@
 @import '../../sass/abstracts/variables';
 @import '../../sass/base/animations';
+@import '../../sass/abstracts/mixins';
 
 .skillsBg {
-    background-image: linear-gradient(#eee,
-    #eee);
+    background-image: linear-gradient(#eee,#eee);
+    //background-image: linear-gradient(rgb(223, 53, 53),rgb(227, 46, 46));
      clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
     width: 100vw;
-    min-height: 120vh;
+    min-height: 110vh;
     height: auto;
     position: relative;
     z-index: 30;
+
+
+    @include respond(tab-land){
+        clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    }
+
+
 }
 
     .skillsContainer {
@@ -31,8 +39,17 @@
     
     
         display: grid;
-        grid-template-rows: max-content max-content 1fr 1fr;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, max-content);
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 2rem;
+
+        @include respond(desktop){
+            padding: 15rem 5rem 20rem 5rem;
+        }
+
+         @include respond(tab-land){
+            padding: 20rem 5rem 20rem 5rem;
+        }
     
      
         
@@ -58,7 +75,8 @@
         .cubeContainer {
     
             grid-row: 2 / span 2;
-            grid-column: 2 / span 2;
+            //grid-column: 2 / span 2;
+            grid-column: 3 / span 2;
             //background-color: orange;
             display: flex;
             justify-content: center;
@@ -293,30 +311,31 @@
     
         .prevBtn {
             grid-row: 2 / span 2;
-            grid-column: 1 / 2;
+            grid-column: 2 / 3;
             display:flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: flex-start;
             margin-top: 7.5rem;
         }
     
         .nextBtn {
             grid-row: 2 / span 2;
-            grid-column: 4 / 5;
+            grid-column: 5 / 6;
             display:flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: flex-start;
             margin-top: 7.5rem;
 
         }
     
         .skillsBoxGridCell {
-            grid-row: 4/5;
-            grid-column: 1 / span 4;
-            position: absolute;
+            grid-row: 5 / span 2;
+            grid-column: 2 / span 4;
+            //position: absolute;
             display: flex;
             justify-content: center;
-            width: 100%;
+            margin: 0 auto;
+            width: 60%;
             height: 100%;
             //background-color: lightblue;
             padding: 1rem 0rem;
@@ -428,8 +447,8 @@
         }
     
         .traitsContainer {
-            grid-row: 3 / span 2;
-            grid-column: 5 / -1;
+            grid-row: 8/ span 2;
+            grid-column: 1 / -1;
             align-self: start;
     
             width: 100%;
@@ -440,23 +459,21 @@
             display:grid;
             grid-template-rows: max-content max-content;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 2rem;
-    
-            .traitsBox1 {
-                //background-color: orange;
-                background-image:   linear-gradient(
-                                            70deg,
-                                            rgba($color-blue-dark, 0.9) 70%,
-                                            rgba($color-black, 0.5) 70%
-                                            ),
-                                            url('../../images/typing-mac.jpg');
+            //grid-gap: 0.5rem;
+        
+            .traitsBox1, .traitsBox2, .traitsBox3, .traitsBox4 {
+                //background-color: rgb(99, 159, 48);
                 background-size: cover;
-                border-radius: 5px;
                 padding: 1rem;
-                box-shadow: .5rem 1rem 3rem black;
                 transition: all .5s ease;
                 position: relative;
                 z-index: 5;
+
+                display: flex;
+                flex-wrap: wrap;
+                align-items:flex-start;
+                align-content: flex-start;
+
     
                 &:hover {
                     transform: scale(1.2);
@@ -467,98 +484,58 @@
     
             }
     
-            .traitsBox2 {
-                background-image:   linear-gradient(
-                                            70deg,
-                                            rgba(0, 0, 0, 0.8) 70%,
-                                            rgba($color-blue, 0.3) 70%
-                                            ),
-                                            url('../../images/forest-trees.jpg');
-                background-size: cover;
-                border-radius: 5px;
-                padding: 1rem;
-                box-shadow: .5rem 1rem 3rem black;
-                transition: all .5s ease;
-                position: relative;
-                z-index: 5;
-    
-                &:hover {
-                    transform: scale(1.2);
-                    z-index: 10;            
+
+
+            .traitLogo {
+               flex: 0 0 20%;
+                height: 8rem;
+               // background-color: darkorange;
+                &__scaled {
+                    transform: translate(15rem, 10rem) scale(3.5);
                 }
-    
-            }
-    
-            .traitsBox3 {
-                background-image:   linear-gradient(
-                                            70deg,
-                                            rgba(0, 0, 0, 0.8) 70%,
-                                            rgba($color-blue, 0.3) 70%
-                                            ),
-                                            url('../../images/Opera-house.jpg');
-                background-size: cover;
-                border-radius: 5px;
-                padding: 1rem;
-                box-shadow: .5rem 1rem 3rem black;
-                transition: all .5s ease;
-                position: relative;
-                z-index: 5;
-    
-                &:hover {
-                    transform: scale(1.2);
-                    z-index: 10;
+
+                &__comm {
+                    fill: rgb(12, 197, 239);
                 }
-    
-            }
-    
-            .traitsBox4 {
-                background-image:   linear-gradient(
-                                            70deg,
-                                            rgba($color-blue-dark, 0.9) 70%,
-                                            rgba($color-black, 0.5) 70%
-                                            ),
-                                            url('../../images/birds-eye-grass.jpg');
-                background-size: cover;
-                border-radius: 5px;
-                padding: 1rem;
-                box-shadow: .5rem 1rem 3rem black;
-                transition: all .5s ease;
-                position: relative;
-                z-index: 5;
-    
-                &:hover {
-                    transform: scale(1.2);
-                    z-index: 10;
+
+                &__solve {
+                    fill: rgb(206, 185, 20);
                 }
-    
+
+                &__manage {
+                    fill: rgb(7, 177, 55);
+                }
+
+                &__learn {
+                    fill: rgb(234, 124, 28);
+                }
             }
-    
+
             .traitHeader {
-                color: white;
-                font-size: 2.5rem;
+                color: $color-blue-dark;
+                flex: 1 0 70%;
+                //background-color: navy;
+                font-size: 4.5rem;
+                height: 8rem;
                 font-family: $font-header;
                 text-transform: uppercase;
+                display: flex;
+                align-items: flex-end;
             }
     
             .traitDescription {
-                //background-color: green;
-                width: 70%;
+                //background-color: rgb(165, 26, 165);
                 word-wrap: break-word;
                 hyphens: auto;
-                color: white;
-                font-size: 1.4rem;
+                color: $color-black;
+                font-size: 1.8rem;
                 font-family: $font-paragraph;
+                padding: 1rem;
                 //text-transform: uppercase;
     
             }
     
-            .traitLogo {
-                position: absolute;
-                top: 3rem;
-                right: 3rem;
-                transform: translate(-2rem, 3rem) scale(2);
-                fill: $color-white;
-            }
+
     
         }
     }

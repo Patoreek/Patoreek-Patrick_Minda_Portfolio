@@ -62,7 +62,7 @@ const Bio = () => {
                 data-aos="fade-right"
                 data-aos-delay="500"
                 data-aos-duration="1000"
-                data-aos-offset="-100">
+                data-aos-offset="0">
                 <h3 className={classes.secondHeader}>Enjoy the little things</h3>
                 <p className={classes.paragraph}> 
                 I enjoy hanging out, trying new things in terms of activities, food and places. I enjoy electronic music
