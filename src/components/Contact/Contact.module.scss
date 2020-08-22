@@ -1,4 +1,5 @@
 @import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 
 
 .contactBg {
@@ -54,6 +55,20 @@
          display: grid;
          grid-template-rows: min-content max-content;
          grid-template-columns: 50% 1fr;
+
+         @include respond(tab-land) {
+            flex: 0 0 80%;
+         }
+
+         @include respond(tab-port) {
+            grid-template-rows: 50rem min-content max-content;
+            grid-template-columns: 1fr;
+         }
+
+         @include respond(phone) {
+            flex: 0 0 95%;
+         }
+         
     
           &__header {
              grid-row: 1 / 2;
@@ -66,6 +81,11 @@
              color: $color-blue-dark;
              text-transform: uppercase;
              font-family: $font-header;
+
+             @include respond(tab-port){
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
     
           }
     
@@ -78,7 +98,10 @@
                 flex-wrap: wrap;
                 margin: 0rem 1rem;
                 
-              
+                @include respond(tab-port){
+                    grid-row: 3 / 4;
+                    grid-column: 1 / 2;
+                }
                 
             
              &__nameInput {
@@ -226,6 +249,13 @@
             position: relative;
     
             padding: 0rem 0rem 5rem 5rem;
+
+            @include respond(tab-port){
+                grid-row: 1 / span 1;
+                grid-column: 1 / span 2;
+                background-size: 100%;
+                background-position: center;
+            }
     
             &::before {
                 content: '';
@@ -255,6 +285,7 @@
                 //background-color: rgba(218, 92, 244, 0.79);
                 position: absolute;
                 right: 0;
+                top: 0;
     
                 &__linkedInIcon, &__githubIcon {
                     font-size: 4rem;
@@ -296,6 +327,10 @@
                 font-size: 3rem;
                 padding-bottom: 2.5rem;
                 font-family: $font-header;
+
+                @include respond(tab-port){
+                    font-size: 5rem;
+                }
                 //text-transform: uppercase;
     
             }
@@ -305,6 +340,10 @@
                 font-size: 2.5rem;
                 font-family: $font-header;
                 text-transform: uppercase;
+
+                @include respond(tab-port){
+                    font-size: 3.5rem;
+                }
             }
     
           }
