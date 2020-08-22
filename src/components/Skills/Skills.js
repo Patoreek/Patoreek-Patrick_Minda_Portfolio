@@ -272,9 +272,9 @@ const Skills = () => {
                     </div>
             
                     <div className={classes.traitsContainer}
-                    data-aos="fadeIn"
-                    data-aos-delay="750"
-                    data-aos-duration="1000">
+                    data-aos="zoom-out-up"
+                    data-aos-duration="1000"
+                    >
                         <div className={classes.traitsBox1}>
                             <CommunincationLogo className={`${classes.traitLogo} ${classes.traitLogo__comm}`}/>
                             <h3 className={classes.traitHeader}>Communication</h3>
@@ -282,7 +282,6 @@ const Skills = () => {
                                     Clear and Precise communication. I make to that I understand what is being conveyed.
                                     Great at listening and effectively follow instructions. Able to be a team player.
                                 </p>
-
                         </div>                
 
                         <div className={classes.traitsBox2}>
@@ -314,7 +313,7 @@ const Skills = () => {
                         </div>
                     </div>
 
-                    <NextBtn linkTo="projects" color="#9b9b9b" offset={50} scrollOffset={140}/>
+                    <NextBtn linkTo="projects" color="#9b9b9b" offset={125} scrollOffset={140}/>
             </div>
         </div>
     );
