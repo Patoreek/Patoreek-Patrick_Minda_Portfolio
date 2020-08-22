@@ -30,7 +30,11 @@
         justify-content: center;
 
         @include respond(tab-port) {
-            padding: 15rem 10rem 198rem 10rem;
+            padding: 15rem 10rem 360rem 10rem;
+        }
+
+        @include respond(phone){
+            padding: 15rem 2rem 350rem 2rem;
         }
 
 
@@ -63,9 +67,16 @@
                 //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
                 //grid-template-columns: 30rem; //minmax(20rem, 30rem)
 
-                grid-template-rows: repeat(3, 75rem); //minmax(30rem, 45rem)
-                grid-template-columns: 50rem; //minmax(20rem, 30rem)
+                grid-template-rows: repeat(3, max-content); //minmax(30rem, 45rem)
+                grid-template-columns: minmax(70rem, 1fr); //minmax(20rem, 30rem)
             }
+
+            @include respond(phone){
+                //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
+                //grid-template-columns: 30rem; //minmax(20rem, 30rem)
+                grid-template-columns: 1fr; //minmax(20rem, 30rem)
+            }
+
         }
     
         .card {
@@ -88,15 +99,35 @@
                 backface-visibility: hidden;
                 transition: all .8s ease;
                 overflow: hidden;
+
+                @include respond(tab-port){
+                    height: auto;
+                    position:relative;
+                }
+            }
+
+            &__Front {
+                @include respond(tab-port){
+                    border-radius: 5px 5px 0px 0px;
+                 }
             }
     
             &__Back {
                 transform: rotateY(180deg); //! change this back to 180deg
                 display: grid;
                 grid-template-rows: 1fr max-content max-content;
+
+                @include respond(tab-port){
+                    transform: rotateY(0deg); //! change this back to 0deg
+                    border-radius: 0px 0px 5px 5px;
+                    background-image: #eee !important;
+
+                }
     
                 &__red {
                     background-image: linear-gradient(to bottom right, $color-1, $color-1-light);
+                    
+                    
                 }
     
                 &__blue {
@@ -107,6 +138,12 @@
                 &__green {
                     background-image: linear-gradient(to bottom right, $color-3, $color-3-light);
     
+                }
+
+                &__red, &__green, &__blue {
+                    @include respond(tab-port){
+                        background-image: linear-gradient(to bottom right, $color-white, $color-white);
+                     }
                 }
     
                 .technologyContainer {
@@ -128,6 +165,10 @@
                         text-align: center;
                         padding-top: 2rem;
                         color: $color-white;
+
+                        @include respond(tab-port){
+                             color: $color-black;
+                        }
                     
                     }
     
@@ -144,9 +185,19 @@
                                 font-weight: 500;
     
                                 color: $color-white;
+
+                                @include respond(tab-port){
+                                    color: $color-black;
+                                    text-align: center;
+                                    padding: 2rem 12rem;
+                                }
             
                                 &:not(:last-child) {
                                     border-bottom: 1px solid $color-white;
+
+                                    @include respond(tab-port){
+                                        border-bottom: 1px solid $color-grey-light;
+                                    }
                                 }
                             }
                             
@@ -177,6 +228,10 @@
                         &__disabled, &__disabled::before {
                             background-color: #cccccc !important;
                             //background-color: rgba(74, 74, 74, 0.324) !important;
+                        }
+
+                        @include respond(tab-port){
+                            border: 1px solid rgba($color-grey-light, .8);
                         }
     
                         &::before {
@@ -240,6 +295,8 @@
                     align-items: center;
                     margin: 1rem 0rem 2rem 0rem;
 
+                    
+
     
                     .liveBtn {
                         background-color: $color-white;
@@ -253,6 +310,10 @@
                         justify-content: center;
                         align-items: center;
                         transition: all .3s ease;
+
+                        @include respond(tab-port){
+                            border: 1px solid rgba($color-grey-light, .8);
+                        }
     
                         &__disabled, &__disabled::before {
                             background-color: rgba(94, 94, 92, 0.489) !important;
@@ -353,6 +414,10 @@
             }
             &:hover .card__Front {
                 transform: rotateY(-180deg);
+
+                @include respond(tab-port){
+                    transform: rotateY(0deg);
+                 }
             }
     
             .imageContainer {
@@ -361,9 +426,11 @@
                 //clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
                 //clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
                 clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
-    
-    
                 position: relative;
+
+                @include respond(tab-port){
+                    height: 45rem;
+                 }
     
                 &__red {
                     &::before {
@@ -419,6 +486,12 @@
                 text-align: center;
                 margin-top: -5rem;
                 position: relative;
+
+                @include respond(phone){
+                    margin-top: -7rem;
+                }
+
+                
                 
     
                 h3 {
@@ -426,7 +499,13 @@
                     text-transform: uppercase;
                     font-family: $font-header;
                     color: $color-white;
+
+                    @include respond(tab-port){
+                        font-size: 4rem;
+                    }
                 }
+
+
             }
     
             .listContainer {
@@ -444,6 +523,11 @@
                         margin: 0 auto;
                         font-size: 1.4rem;
                         font-family: $font-paragraph;
+
+                        @include respond(tab-port){
+                            font-size: 1.6rem;
+                            padding: 2rem 0rem;
+                        }
     
                         &:not(:last-child) {
                             border-bottom: 1px solid rgba($color-grey-light, .5);
@@ -466,6 +550,8 @@
                left: 50%;
                transform: translateX(-50%);
             }
+
+            
     
             .moreProjectsBtn {
                 text-align: center;
@@ -485,7 +571,11 @@
 
                     @include respond(tab-port) {
                         font-size: 3rem;
-                     }
+                    }
+
+                     @include respond(phone){
+                        font-size: 2.5rem;
+                    }
                 }
     
                 
