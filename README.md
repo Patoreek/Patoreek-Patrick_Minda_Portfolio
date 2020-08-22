@@ -16,8 +16,5 @@ After installation, simply run
 npm start
 ```
 
-## Usage
-
-
 ## Credits
 Developed and Built by Patrick Minda
