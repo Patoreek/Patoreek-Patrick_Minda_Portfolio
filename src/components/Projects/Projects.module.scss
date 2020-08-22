@@ -1,4 +1,5 @@
 @import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
 
 .projectsBg {
     width: 100vw;
@@ -11,12 +12,13 @@
         min-height:100vh;
         max-width: 1400px;
         margin: 0 auto;
+        height: auto;
         /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,250,196,1) 82%, rgba(255,254,167,1) 100%); */
         // background-image: linear-gradient(rgba($color-blue, .9),rgba($color-black, .9)), url('../../images/abstract-red-blue.jpg');
         // background-size: cover;
     
         //overflow: hidden;
-        padding: 15rem 10rem 18rem 10rem;
+        padding: 15rem 10rem 28rem 10rem;
         margin-top: -15rem;
     
         position:relative;
@@ -26,7 +28,14 @@
         grid-template-rows: max-content max-content;
         grid-gap: 2rem;
         justify-content: center;
-    
+
+        @include respond(tab-port) {
+            padding: 15rem 10rem 198rem 10rem;
+        }
+
+
+
+       
         .projectsHeader {
             font-size: 5rem;
             color: $color-white;
@@ -49,6 +58,14 @@
             align-items: center;
             justify-items: center;
             grid-gap: 4rem;
+
+            @include respond(tab-port){
+                //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
+                //grid-template-columns: 30rem; //minmax(20rem, 30rem)
+
+                grid-template-rows: repeat(3, 75rem); //minmax(30rem, 45rem)
+                grid-template-columns: 50rem; //minmax(20rem, 30rem)
+            }
         }
     
         .card {
@@ -442,6 +459,13 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
+
+            @include respond(tab-port) {
+               position: absolute;
+               bottom: 22rem;
+               left: 50%;
+               transform: translateX(-50%);
+            }
     
             .moreProjectsBtn {
                 text-align: center;
@@ -458,6 +482,10 @@
                     z-index: 10;
                     font-size: 1.8rem;
                     color: $color-white;
+
+                    @include respond(tab-port) {
+                        font-size: 3rem;
+                     }
                 }
     
                 
