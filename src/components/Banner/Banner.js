@@ -4,7 +4,9 @@ import ReactTypingEffect from 'react-typing-effect';
 import ContactModal from '../Modals/ContactModal/ContactModal';
 import NextBtn from '../NextBtn/NextBtn';
 
-import video from '../../videos/LPageOpt.mp4';
+//import video from '../../videos/LPageOpt.mp4';
+import video from '../../videos/Mars_Orbit.mp4';
+
 import { ReactComponent as ChatIcon } from '../../images/bubbles3.svg';
 import { ReactComponent as DownloadIcon } from '../../images/file-text2.svg';
 
