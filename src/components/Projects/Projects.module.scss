@@ -1,611 +1,599 @@
-@import '../../sass/abstracts/variables';
-@import '../../sass/abstracts/mixins';
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
 
 .projectsBg {
-    width: 100vw;
-    height: auto;
-    background-image: linear-gradient(rgba($color-blue, .9),rgba($color-black, .9)), url('../../images/abstract-red-blue.jpg');
-    background-size: cover;
+  width: 100vw;
+  height: auto;
+  background-image: linear-gradient(
+      rgba($color-blue, 0.9),
+      rgba($color-black, 0.9)
+    ),
+    url("../../images/abstract-red-blue.jpg");
+  background-size: cover;
 
-    .projectsContainer {
-        width: 100vw;
-        min-height:100vh;
-        max-width: 1400px;
-        margin: 0 auto;
-        height: auto;
-        /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,250,196,1) 82%, rgba(255,254,167,1) 100%); */
-        // background-image: linear-gradient(rgba($color-blue, .9),rgba($color-black, .9)), url('../../images/abstract-red-blue.jpg');
-        // background-size: cover;
-    
-        //overflow: hidden;
-        padding: 15rem 10rem 28rem 10rem;
-        margin-top: -15rem;
-    
-        position:relative;
-        z-index: 20;
-    
-        display: grid;
-        grid-template-rows: max-content max-content;
-        grid-gap: 2rem;
-        justify-content: center;
+  .projectsContainer {
+    width: 100vw;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: auto;
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,250,196,1) 82%, rgba(255,254,167,1) 100%); */
+    // background-image: linear-gradient(rgba($color-blue, .9),rgba($color-black, .9)), url('../../images/abstract-red-blue.jpg');
+    // background-size: cover;
+
+    //overflow: hidden;
+    padding: 15rem 10rem 28rem 10rem;
+    margin-top: -15rem;
+
+    position: relative;
+    z-index: 20;
+
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-gap: 2rem;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      padding: 15rem 10rem 360rem 10rem;
+    }
+
+    @include respond(phone) {
+      padding: 15rem 0.5rem 350rem 0.5rem;
+    }
+
+    .projectsHeader {
+      font-size: 5rem;
+      color: $color-white;
+      text-align: center;
+      font-family: $font-header;
+      text-transform: uppercase;
+      margin-top: 3rem;
+    }
+
+    .cardsContainer {
+      width: 100%;
+      height: 65vh;
+      //background-color: rgba(0, 128, 0, .6);
+
+      display: grid;
+
+      grid-template-rows: minmax(30rem, 45rem);
+      grid-template-columns: repeat(3, minmax(20rem, 30rem));
+      align-items: center;
+      justify-items: center;
+      grid-gap: 4rem;
+
+      @include respond(tab-port) {
+        //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
+        //grid-template-columns: 30rem; //minmax(20rem, 30rem)
+
+        grid-template-rows: repeat(3, max-content); //minmax(30rem, 45rem)
+        grid-template-columns: minmax(70rem, 1fr); //minmax(20rem, 30rem)
+      }
+
+      @include respond(phone) {
+        //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
+        //grid-template-columns: 30rem; //minmax(20rem, 30rem)
+        grid-template-columns: 1fr; //minmax(20rem, 30rem)
+      }
+    }
+
+    .card {
+      position: relative;
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      width: 100%;
+      height: 100%;
+
+      &__Front,
+      &__Back {
+        background-color: $color-white;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: all 0.8s ease;
+        overflow: hidden;
 
         @include respond(tab-port) {
-            padding: 15rem 10rem 360rem 10rem;
+          height: auto;
+          position: relative;
+        }
+      }
+
+      &__Front {
+        @include respond(tab-port) {
+          border-radius: 5px 5px 0px 0px;
+        }
+      }
+
+      &__Back {
+        transform: rotateY(180deg); //! change this back to 180deg
+        display: grid;
+        grid-template-rows: 1fr max-content max-content;
+
+        @include respond(tab-port) {
+          transform: rotateY(0deg); //! change this back to 0deg
+          border-radius: 0px 0px 5px 5px;
+          background-image: #eee !important;
         }
 
-        @include respond(phone){
-            padding: 15rem .5rem 350rem .5rem;
+        &__red {
+          background-image: linear-gradient(
+            to bottom right,
+            $color-1,
+            $color-1-light
+          );
         }
 
+        &__blue {
+          background-image: linear-gradient(
+            to bottom right,
+            $color-2,
+            $color-2-light
+          );
+        }
 
+        &__green {
+          background-image: linear-gradient(
+            to bottom right,
+            $color-3,
+            $color-3-light
+          );
+        }
 
-       
-        .projectsHeader {
-            font-size: 5rem;
-            color: $color-white;
-            text-align: center;
+        &__red,
+        &__green,
+        &__blue {
+          @include respond(tab-port) {
+            background-image: linear-gradient(
+              to bottom right,
+              $color-white,
+              $color-white
+            );
+          }
+        }
+
+        .technologyContainer {
+          grid-row: 1 / 2;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+
+          .technologyHeader {
+            font-size: 2.5rem;
+            //background-color:red;
             font-family: $font-header;
             text-transform: uppercase;
-            margin-top: 3rem;
-    
-        }
-    
-        .cardsContainer {
             width: 100%;
-            height: 65vh;
-            //background-color: rgba(0, 128, 0, .6);
-    
-            display: grid;
-    
-            grid-template-rows: minmax(30rem, 45rem);
-            grid-template-columns: repeat(3, minmax(20rem, 30rem));
-            align-items: center;
-            justify-items: center;
-            grid-gap: 4rem;
-
-            @include respond(tab-port){
-                //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
-                //grid-template-columns: 30rem; //minmax(20rem, 30rem)
-
-                grid-template-rows: repeat(3, max-content); //minmax(30rem, 45rem)
-                grid-template-columns: minmax(70rem, 1fr); //minmax(20rem, 30rem)
-            }
-
-            @include respond(phone){
-                //grid-template-rows: repeat(3, 45rem); //minmax(30rem, 45rem)
-                //grid-template-columns: 30rem; //minmax(20rem, 30rem)
-                grid-template-columns: 1fr; //minmax(20rem, 30rem)
-
-            }
-
-        }
-    
-        .card {
-            position: relative;
-            perspective: 150rem;
-            -moz-perspective: 150rem;
-            width: 100%;
-            height: 100%;
-        
-            
-            &__Front, &__Back {
-                background-color: $color-white;
-                width: 100%;
-                height: 100%;
-                border-radius: 5px;
-                backface-visibility: hidden;
-                position: absolute;
-                top: 0;
-                left: 0;
-                backface-visibility: hidden;
-                transition: all .8s ease;
-                overflow: hidden;
-
-                @include respond(tab-port){
-                    height: auto;
-                    position:relative;
-                }
-            }
-
-            &__Front {
-                @include respond(tab-port){
-                    border-radius: 5px 5px 0px 0px;
-                 }
-            }
-    
-            &__Back {
-                transform: rotateY(180deg); //! change this back to 180deg
-                display: grid;
-                grid-template-rows: 1fr max-content max-content;
-
-                @include respond(tab-port){
-                    transform: rotateY(0deg); //! change this back to 0deg
-                    border-radius: 0px 0px 5px 5px;
-                    background-image: #eee !important;
-
-                }
-    
-                &__red {
-                    background-image: linear-gradient(to bottom right, $color-1, $color-1-light);
-                    
-                    
-                }
-    
-                &__blue {
-                    background-image: linear-gradient(to bottom right, $color-2, $color-2-light);
-    
-                }
-    
-                &__green {
-                    background-image: linear-gradient(to bottom right, $color-3, $color-3-light);
-    
-                }
-
-                &__red, &__green, &__blue {
-                    @include respond(tab-port){
-                        background-image: linear-gradient(to bottom right, $color-white, $color-white);
-                     }
-                }
-    
-                .technologyContainer {
-                    grid-row: 1 / 2;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-    
-    
-                    .technologyHeader {
-                        font-size: 2.5rem;
-                        //background-color:red;
-                        font-family: $font-header;
-                        text-transform: uppercase;
-                        width: 100%;
-                        text-align: center;
-                        padding-top: 2rem;
-                        color: $color-white;
-
-                        @include respond(tab-port){
-                             color: $color-black;
-                        }
-                    
-                    }
-    
-                    .techListContainer {
-                        ul {
-                            list-style: none;
-                            padding-top: 1rem;
-            
-                            li {
-                                text-align: left;
-                                padding: 1.2rem 1rem;
-                                font-size: 1.6rem;
-                                font-family: $font-paragraph;
-                                font-weight: 500;
-    
-                                color: $color-white;
-
-                                @include respond(tab-port){
-                                    color: $color-black;
-                                    text-align: center;
-                                    padding: 2rem 12rem;
-                                }
-            
-                                &:not(:last-child) {
-                                    border-bottom: 1px solid $color-white;
-
-                                    @include respond(tab-port){
-                                        border-bottom: 1px solid $color-grey-light;
-                                    }
-                                }
-                            }
-                            
-                        }
-                    }
-    
-                }
-    
-                .githubBtnContainer {
-                    grid-row: 2 / 3;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 1rem 0rem;
-    
-                    .githubBtn {
-                        background-color: $color-white;
-                        color: black;
-                        border-radius: 100px;
-                        width: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-    
-                        transition: all .3s ease;
-                        position:relative;
-    
-                        &__disabled, &__disabled::before {
-                            background-color: #cccccc !important;
-                            //background-color: rgba(74, 74, 74, 0.324) !important;
-                        }
-
-                        @include respond(tab-port){
-                            border: 1px solid rgba($color-grey-light, .8);
-                        }
-    
-                        &::before {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            background-color: $color-white;
-                            border-radius: 100px;
-                            z-index: 5;
-                            opacity: 100%;
-                            transition: all .3s ease;
-                        }
-    
-                        &:hover {
-                            transform: scale(1.2);
-                            text-decoration: none;
-    
-                        }
-    
-                        &:hover::before {
-                            opacity: 0%;
-                            transform: scale(1.5);
-                        }
-                        
-                      
-    
-                        .githubNameIcon, .githubLogoIcon {
-                            font-size: 4rem;
-                            position: relative;
-                            z-index: 10;
-    
-                            &__red {
-                                color: $color-1;
-                            }
-    
-                            &__blue {
-                                color: $color-2;
-                            }
-    
-                            &__green {
-                                color: $color-3;
-                            }
-    
-                            &__disabled {
-                                fill: #666666 !important;
-                                // fill: rgba(74, 74, 74, 0.324) !important;
-                            }
-                        }
-                       
-                    }
-                }
-    
-                .liveBtnContainer {
-                    grid-row: 3 / 4;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 1rem 0rem 2rem 0rem;
-
-                    
-
-    
-                    .liveBtn {
-                        background-color: $color-white;
-                        color: black;
-                        width: 50%;
-                        border-radius: 100px;
-                        position: relative;
-                        padding: .3rem 0rem;
-    
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        transition: all .3s ease;
-
-                        @include respond(tab-port){
-                            border: 1px solid rgba($color-grey-light, .8);
-                        }
-    
-                        &__disabled, &__disabled::before {
-                            background-color: rgba(94, 94, 92, 0.489) !important;
-                            background-color: #cccccc !important;
-                            //@at-root: 40%;
-                        }
-    
-    
-                        &::before {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            background-color: $color-white;
-                            border-radius: 100px;
-                            z-index: 5;
-                            opacity: 100%;
-                            transition: all .3s ease;
-    
-                            
-                        }
-    
-                        &:hover {
-                            transform: scale(1.2);
-                            text-decoration: none;
-    
-                        }
-    
-                        &:hover::before {
-                            opacity: 0%;
-                            transform: scale(1.5);
-                        }
-                        
-        
-                        .liveText {
-                            font-size: 1.4rem;
-                            font-weight: 700;
-                            font-family: $font-paragraph;
-                            padding-right: 1rem;
-                            position: relative;
-                            z-index: 10;
-    
-                            &__red {
-                                color: rgb(234, 0, 0);
-                            }
-    
-                            &__blue {
-                                color: rgb(0, 83, 208);
-                            }
-    
-                            &__green {
-                                color: rgb(6, 176, 40);
-                            }
-    
-                            &__disabled {
-                                color: #666666 !important;
-                                //color: rgba(74, 74, 74, 0.324) !important;
-                            }
-                        }
-        
-                        .liveIcon {
-                            width: 3.5rem;
-                            height: 3.5rem;
-                            position: relative;
-                            z-index: 10;
-                            margin-right:.5rem;
-    
-                            &__red {
-                                fill: rgb(234, 0, 0);
-                            }
-    
-                            &__blue {
-                                fill: rgb(0, 83, 208);
-                            }
-    
-                            &__green {
-                                fill: rgb(6, 176, 40);
-                            }
-    
-                            &__disabled {
-                                fill: #666666 !important;
-                                //fill: rgba(74, 74, 74, 0.324) !important;
-                            }
-                        }
-                    }
-    
-    
-            
-                }
-    
-            }
-    
-            &:hover .card__Back {
-                transform: rotateY(0deg);
-            }
-            &:hover .card__Front {
-                transform: rotateY(-180deg);
-
-                @include respond(tab-port){
-                    transform: rotateY(0deg);
-                 }
-            }
-    
-            .imageContainer {
-                width: 100%;
-                height: 50%;
-                //clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
-                //clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
-                clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
-                position: relative;
-
-                @include respond(tab-port){
-                    height: 45rem;
-                 }
-    
-                &__red {
-                    &::before {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-image: linear-gradient(to bottom right, rgba($color-1, .6), rgba($color-1-light, .6));
-                    }
-                }
-    
-                &__blue {
-                    &::before {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-image: linear-gradient(to bottom right, rgba($color-2, .6), rgba($color-2-light, .6));
-                    }
-                }
-    
-                &__green {
-                    &::before {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-image: linear-gradient(to bottom right, rgba($color-3, .6), rgba($color-3-light, .6));
-                    }
-                }
-    
-                
-    
-                
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-    
-            .titleContainer {
-                //background-color: yellow;
-                text-align: center;
-                margin-top: -5rem;
-                position: relative;
-
-                @include respond(phone){
-                    margin-top: -7rem;
-                }
-
-                
-                
-    
-                h3 {
-                    font-size: 2.5rem;
-                    text-transform: uppercase;
-                    font-family: $font-header;
-                    color: $color-white;
-
-                    @include respond(tab-port){
-                        font-size: 4rem;
-                    }
-                }
-
-
-            }
-    
-            .listContainer {
-                //background-color: palevioletred;
-                padding: 1rem 2rem;
-    
-                ul {
-                    list-style: none;
-                    padding-top: 1rem;
-    
-                    li {
-                        text-align: center;
-                        padding: 1.2rem 0rem;
-                        width: 80%;
-                        margin: 0 auto;
-                        font-size: 1.4rem;
-                        font-family: $font-paragraph;
-
-                        @include respond(tab-port){
-                            font-size: 1.6rem;
-                            padding: 2rem 0rem;
-                        }
-    
-                        &:not(:last-child) {
-                            border-bottom: 1px solid rgba($color-grey-light, .5);
-                        }
-                    }
-                    
-                }
-            }
-            
-        }
-    
-        .moreBtnContainer {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            text-align: center;
+            padding-top: 2rem;
+            color: $color-white;
 
             @include respond(tab-port) {
-               position: absolute;
-               bottom: 22rem;
-               left: 50%;
-               transform: translateX(-50%);
+              color: $color-black;
             }
+          }
 
-            
-    
-            .moreProjectsBtn {
-                text-align: center;
-                //background-color: red;
-                padding: 0rem 1rem;
-                border-bottom: .3rem solid white;
-                text-decoration: none;
-                position: relative;
-                transition: all .3s ease;
-                
-    
-                span {
-                    position: relative;
-                    z-index: 10;
-                    font-size: 1.8rem;
-                    color: $color-white;
+          .techListContainer {
+            ul {
+              list-style: none;
+              padding-top: 1rem;
 
-                    @include respond(tab-port) {
-                        font-size: 3rem;
-                    }
+              li {
+                text-align: left;
+                padding: 1.2rem 1rem;
+                font-size: 1.6rem;
+                font-family: $font-paragraph;
+                font-weight: 500;
 
-                     @include respond(phone){
-                        font-size: 2rem;
-                    }
+                color: $color-white;
+
+                @include respond(tab-port) {
+                  color: $color-black;
+                  text-align: center;
+                  padding: 2rem 12rem;
                 }
-    
-                
-                &:hover span {
-                    color: $color-blue-dark;
+
+                &:not(:last-child) {
+                  border-bottom: 1px solid $color-white;
+
+                  @include respond(tab-port) {
+                    border-bottom: 1px solid $color-grey-light;
+                  }
                 }
-    
-                &:hover::before {
-                    height: 100%;
-                }
-    
-                &::before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 0%;
-                    background-color:$color-white;
-                    z-index: 5;
-                    transition: all .3s ease;
-    
-                }
-    
-        
-         
+              }
             }
+          }
         }
-    
+
+        .githubBtnContainer {
+          grid-row: 2 / 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem 0rem;
+
+          .githubBtn {
+            background-color: $color-white;
+            color: black;
+            border-radius: 100px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.3s ease;
+            position: relative;
+
+            &__disabled,
+            &__disabled::before {
+              background-color: #cccccc !important;
+              //background-color: rgba(74, 74, 74, 0.324) !important;
+            }
+
+            @include respond(tab-port) {
+              border: 1px solid rgba($color-grey-light, 0.8);
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: $color-white;
+              border-radius: 100px;
+              z-index: 5;
+              opacity: 100%;
+              transition: all 0.3s ease;
+            }
+
+            &:hover {
+              transform: scale(1.2);
+              text-decoration: none;
+            }
+
+            &:hover::before {
+              opacity: 0%;
+              transform: scale(1.5);
+            }
+
+            .githubNameIcon,
+            .githubLogoIcon {
+              font-size: 4rem;
+              position: relative;
+              z-index: 10;
+
+              &__red {
+                color: $color-1;
+              }
+
+              &__blue {
+                color: $color-2;
+              }
+
+              &__green {
+                color: $color-3;
+              }
+
+              &__disabled {
+                fill: #666666 !important;
+                // fill: rgba(74, 74, 74, 0.324) !important;
+              }
+            }
+          }
+        }
+
+        .liveBtnContainer {
+          grid-row: 3 / 4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem 0rem 2rem 0rem;
+
+          .liveBtn {
+            background-color: $color-white;
+            color: black;
+            width: 50%;
+            border-radius: 100px;
+            position: relative;
+            padding: 0.3rem 0rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+
+            @include respond(tab-port) {
+              border: 1px solid rgba($color-grey-light, 0.8);
+            }
+
+            &__disabled,
+            &__disabled::before {
+              background-color: rgba(94, 94, 92, 0.489) !important;
+              background-color: #cccccc !important;
+              //@at-root: 40%;
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: $color-white;
+              border-radius: 100px;
+              z-index: 5;
+              opacity: 100%;
+              transition: all 0.3s ease;
+            }
+
+            &:hover {
+              transform: scale(1.2);
+              text-decoration: none;
+            }
+
+            &:hover::before {
+              opacity: 0%;
+              transform: scale(1.5);
+            }
+
+            .liveText {
+              font-size: 1.4rem;
+              font-weight: 700;
+              font-family: $font-paragraph;
+              padding-right: 1rem;
+              position: relative;
+              z-index: 10;
+
+              &__red {
+                color: rgb(234, 0, 0);
+              }
+
+              &__blue {
+                color: rgb(0, 83, 208);
+              }
+
+              &__green {
+                color: rgb(6, 176, 40);
+              }
+
+              &__disabled {
+                color: #666666 !important;
+                //color: rgba(74, 74, 74, 0.324) !important;
+              }
+            }
+
+            .liveIcon {
+              width: 3.5rem;
+              height: 3.5rem;
+              position: relative;
+              z-index: 10;
+              margin-right: 0.5rem;
+
+              &__red {
+                fill: rgb(234, 0, 0);
+              }
+
+              &__blue {
+                fill: rgb(0, 83, 208);
+              }
+
+              &__green {
+                fill: rgb(6, 176, 40);
+              }
+
+              &__disabled {
+                fill: #666666 !important;
+                //fill: rgba(74, 74, 74, 0.324) !important;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover .card__Back {
+        transform: rotateY(0deg);
+      }
+      &:hover .card__Front {
+        transform: rotateY(-180deg);
+
+        @include respond(tab-port) {
+          transform: rotateY(0deg);
+        }
+      }
+
+      .imageContainer {
+        width: 100%;
+        height: 50%;
+        //clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
+        //clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+        clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+        position: relative;
+
+        @include respond(tab-port) {
+          height: 45rem;
+        }
+
+        &__red {
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              to bottom right,
+              rgba($color-1, 0.5),
+              rgba($color-1-light, 0.5)
+            );
+          }
+        }
+
+        &__blue {
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              to bottom right,
+              rgba($color-2, 0.5),
+              rgba($color-2-light, 0.5)
+            );
+          }
+        }
+
+        &__green {
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              to bottom right,
+              rgba($color-3, 0.5),
+              rgba($color-3-light, 0.5)
+            );
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-position: left;
+          object-fit: cover;
+        }
+      }
+
+      .titleContainer {
+        //background-color: yellow;
+        text-align: center;
+        margin-top: -5rem;
+        position: relative;
+
+        @include respond(phone) {
+          margin-top: -7rem;
+        }
+
+        h3 {
+          font-size: 2.5rem;
+          text-transform: uppercase;
+          font-family: $font-header;
+          color: $color-white;
+
+          @include respond(tab-port) {
+            font-size: 4rem;
+          }
+        }
+      }
+
+      .listContainer {
+        //background-color: palevioletred;
+        padding: 1rem 2rem;
+
+        ul {
+          list-style: none;
+          padding-top: 1rem;
+
+          li {
+            text-align: center;
+            padding: 1.2rem 0rem;
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.4rem;
+            font-family: $font-paragraph;
+
+            @include respond(tab-port) {
+              font-size: 1.6rem;
+              padding: 2rem 0rem;
+            }
+
+            &:not(:last-child) {
+              border-bottom: 1px solid rgba($color-grey-light, 0.5);
+            }
+          }
+        }
+      }
     }
+
+    .moreBtnContainer {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      @include respond(tab-port) {
+        position: absolute;
+        bottom: 22rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .moreProjectsBtn {
+        text-align: center;
+        //background-color: red;
+        padding: 0rem 1rem;
+        border-bottom: 0.3rem solid white;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+
+        span {
+          position: relative;
+          z-index: 10;
+          font-size: 1.8rem;
+          color: $color-white;
+
+          @include respond(tab-port) {
+            font-size: 3rem;
+          }
+
+          @include respond(phone) {
+            font-size: 2rem;
+          }
+        }
+
+        &:hover span {
+          color: $color-blue-dark;
+        }
+
+        &:hover::before {
+          height: 100%;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0%;
+          background-color: $color-white;
+          z-index: 5;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
 }

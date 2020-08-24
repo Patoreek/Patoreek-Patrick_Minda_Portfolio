@@ -2,9 +2,9 @@ import React from "react";
 
 import classes from "./Projects.module.scss";
 
-import image1 from "../../images/Opera-house.jpg";
-import image2 from "../../images/sydney-harbour.jpg";
-import image3 from "../../images/Beach-path.jpg";
+import image1 from "../../images/Locus_img.png";
+import image2 from "../../images/Brighte-img.png";
+import image3 from "../../images/Momento_img.png";
 
 import NextBtn from "../NextBtn/NextBtn";
 
@@ -20,78 +20,6 @@ const Projects = () => {
       <div className={classes.projectsContainer} id="projects">
         <h3 className={classes.projectsHeader}>Projects</h3>
         <div className={classes.cardsContainer}>
-          {/* LOCUS CARD */}
-          <div
-            className={classes.card}
-            data-aos="flip-up"
-            data-aos-delay="100"
-            data-aos-duration="1000"
-          >
-            <div className={classes.card__Front}>
-              <div
-                className={`${classes.imageContainer} ${classes.imageContainer__red}`}
-              >
-                <img src={image1} alt="project homepagewebsite"></img>
-              </div>
-              <div className={classes.titleContainer}>
-                <h3>Locus</h3>
-              </div>
-              <div className={classes.listContainer}>
-                <ul>
-                  <li>Dive site Locator</li>
-                  <li>Add, edit divesites</li>
-                  <li>Comment and rate the sites</li>
-                  <li>Log in and view profiles</li>
-                </ul>
-              </div>
-            </div>
-            <div className={`${classes.card__Back} ${classes.card__Back__red}`}>
-              <div className={classes.technologyContainer}>
-                <h3 className={classes.technologyHeader}>Technologies used</h3>
-                <div className={classes.techListContainer}>
-                  <ul>
-                    <li> M - MongoDB</li>
-                    <li> E - Express.js </li>
-                    <li> R - React</li>
-                    <li> N - Node.js</li>
-                  </ul>
-                </div>
-              </div>
-              <div className={classes.githubBtnContainer}>
-                <a
-                  href="https://github.com/Patoreek/locus_frontend"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className={classes.githubBtn}
-                >
-                  <DiGithubFull
-                    className={`${classes.githubNameIcon} ${classes.githubNameIcon__red}`}
-                  />
-                  <DiGithubBadge
-                    className={`${classes.githubLogoIcon} ${classes.githubLogoIcon__red}`}
-                  />
-                </a>
-              </div>
-              <div className={classes.liveBtnContainer}>
-                {/* CHANGE THIS TO a TAG WHEN THERE IS A LIVE VERSION OR THERE IS ANOTHER PROJECT */}
-                <div
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className={`${classes.liveBtn} ${classes.liveBtn__disabled}`}
-                >
-                  <span
-                    className={`${classes.liveText} ${classes.liveText__red} ${classes.liveText__disabled} `}
-                  >
-                    Live
-                  </span>
-                  <LiveSVG
-                    className={`${classes.liveIcon} ${classes.liveIcon__red} ${classes.liveIcon__disabled}`}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* BRIGHTE CARD */}
           <div
             className={classes.card}
@@ -101,7 +29,7 @@ const Projects = () => {
           >
             <div className={classes.card__Front}>
               <div
-                className={`${classes.imageContainer} ${classes.imageContainer__blue}`}
+                className={`${classes.imageContainer} ${classes.imageContainer__green}`}
               >
                 <img src={image2} alt="project homepage website"></img>
               </div>
@@ -118,7 +46,7 @@ const Projects = () => {
               </div>
             </div>
             <div
-              className={`${classes.card__Back} ${classes.card__Back__blue}`}
+              className={`${classes.card__Back} ${classes.card__Back__green}`}
             >
               <div className={classes.technologyContainer}>
                 <h3 className={classes.technologyHeader}>Technologies used</h3>
@@ -138,10 +66,10 @@ const Projects = () => {
                   {" "}
                   {/* CHANGE THIS TO a TAG WHEN THERE IS A GITHUB REPO THATS PUBLIC / ANOTHER PROJECT */}
                   <DiGithubFull
-                    className={`${classes.githubNameIcon} ${classes.githubNameIcon__blue} ${classes.githubNameIcon__disabled}`}
+                    className={`${classes.githubNameIcon} ${classes.githubNameIcon__green} ${classes.githubNameIcon__disabled}`}
                   />
                   <DiGithubBadge
-                    className={`${classes.githubLogoIcon} ${classes.githubLogoIcon__blue} ${classes.githubLogoIcon__disabled}`}
+                    className={`${classes.githubLogoIcon} ${classes.githubLogoIcon__green} ${classes.githubLogoIcon__disabled}`}
                   />
                 </div>
               </div>
@@ -153,14 +81,88 @@ const Projects = () => {
                   className={classes.liveBtn}
                 >
                   <span
-                    className={`${classes.liveText} ${classes.liveText__blue}`}
+                    className={`${classes.liveText} ${classes.liveText__green}`}
                   >
                     Live
                   </span>
                   <LiveSVG
-                    className={`${classes.liveIcon} ${classes.liveIcon__blue}`}
+                    className={`${classes.liveIcon} ${classes.liveIcon__green}`}
                   />
                 </a>
+              </div>
+            </div>
+          </div>
+
+          {/* LOCUS CARD */}
+          <div
+            className={classes.card}
+            data-aos="flip-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div className={classes.card__Front}>
+              <div
+                className={`${classes.imageContainer} ${classes.imageContainer__blue}`}
+              >
+                <img src={image1} alt="project homepagewebsite"></img>
+              </div>
+              <div className={classes.titleContainer}>
+                <h3>Locus</h3>
+              </div>
+              <div className={classes.listContainer}>
+                <ul>
+                  <li>Dive site Locator</li>
+                  <li>Add, edit divesites</li>
+                  <li>Comment and rate the sites</li>
+                  <li>Log in and view profiles</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className={`${classes.card__Back} ${classes.card__Back__blue}`}
+            >
+              <div className={classes.technologyContainer}>
+                <h3 className={classes.technologyHeader}>Technologies used</h3>
+                <div className={classes.techListContainer}>
+                  <ul>
+                    <li> M - MongoDB</li>
+                    <li> E - Express.js </li>
+                    <li> R - React</li>
+                    <li> N - Node.js</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={classes.githubBtnContainer}>
+                <a
+                  href="https://github.com/Patoreek/locus_frontend"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={classes.githubBtn}
+                >
+                  <DiGithubFull
+                    className={`${classes.githubNameIcon} ${classes.githubNameIcon__blue}`}
+                  />
+                  <DiGithubBadge
+                    className={`${classes.githubLogoIcon} ${classes.githubLogoIcon__blue}`}
+                  />
+                </a>
+              </div>
+              <div className={classes.liveBtnContainer}>
+                {/* CHANGE THIS TO a TAG WHEN THERE IS A LIVE VERSION OR THERE IS ANOTHER PROJECT */}
+                <div
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={`${classes.liveBtn} ${classes.liveBtn__disabled}`}
+                >
+                  <span
+                    className={`${classes.liveText} ${classes.liveText__blue} ${classes.liveText__disabled} `}
+                  >
+                    Live
+                  </span>
+                  <LiveSVG
+                    className={`${classes.liveIcon} ${classes.liveIcon__blue} ${classes.liveIcon__disabled}`}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +176,7 @@ const Projects = () => {
           >
             <div className={classes.card__Front}>
               <div
-                className={`${classes.imageContainer} ${classes.imageContainer__green}`}
+                className={`${classes.imageContainer} ${classes.imageContainer__red}`}
               >
                 <img src={image3} alt="project homepagewebsite"></img>
               </div>
@@ -190,9 +192,7 @@ const Projects = () => {
                 </ul>
               </div>
             </div>
-            <div
-              className={`${classes.card__Back} ${classes.card__Back__green}`}
-            >
+            <div className={`${classes.card__Back} ${classes.card__Back__red}`}>
               <div className={classes.technologyContainer}>
                 <h3 className={classes.technologyHeader}>Technologies used</h3>
                 <div className={classes.techListContainer}>
@@ -213,10 +213,10 @@ const Projects = () => {
                   className={classes.githubBtn}
                 >
                   <DiGithubFull
-                    className={`${classes.githubNameIcon} ${classes.githubNameIcon__green}`}
+                    className={`${classes.githubNameIcon} ${classes.githubNameIcon__red}`}
                   />
                   <DiGithubBadge
-                    className={`${classes.githubLogoIcon} ${classes.githubLogoIcon__green}`}
+                    className={`${classes.githubLogoIcon} ${classes.githubLogoIcon__red}`}
                   />
                 </a>
               </div>
@@ -229,12 +229,12 @@ const Projects = () => {
                   className={classes.liveBtn}
                 >
                   <span
-                    className={`${classes.liveText} ${classes.liveText__green}`}
+                    className={`${classes.liveText} ${classes.liveText__red}`}
                   >
                     Live
                   </span>
                   <LiveSVG
-                    className={`${classes.liveIcon} ${classes.liveIcon__green}`}
+                    className={`${classes.liveIcon} ${classes.liveIcon__red}`}
                   />
                 </a>
               </div>

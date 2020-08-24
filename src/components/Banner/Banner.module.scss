@@ -1,273 +1,260 @@
-@import '../../sass/abstracts/variables';
-@import '../../sass/abstracts/mixins';
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
 
 .Banner {
-    background-color: $color-black;
-    background-size: 100%;
-    width:  100vw;
-    height: 93vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 5rem;
-    overflow: hidden;
-    flex-wrap: wrap;
+  background-color: $color-black;
+  background-size: 100%;
+  width: 100vw;
+  height: 93vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem;
+  overflow: hidden;
+  flex-wrap: wrap;
 
-    @include respond (phone) {
-       justify-content: flex-start;
-       padding: 0rem;
+  @include respond(phone) {
+    justify-content: flex-start;
+    padding: 0rem;
+  }
+
+  .bgVideoContainer {
+    opacity: 15%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .video {
+      width: 100vw;
+      object-fit: cover;
+      height: 93vh;
+    }
+  }
+
+  .nameSloganContainer {
+    //background-color: rgba(54, 3, 157, 0.53);
+    display: flex;
+    flex-direction: column;
+    z-index: 36;
+    padding: 2rem;
+
+    @include respond(tab-port) {
+      flex: 1 0 100%;
     }
 
-    .bgVideoContainer {
-        opacity: 15%;
+    @include respond(phone) {
+      align-self: flex-start;
+      padding: 3rem 1rem 0rem 1rem;
+    }
+
+    .nameText {
+      color: $color-white;
+      font-size: 12rem;
+      font-family: $font-name;
+      //text-transform: uppercase;
+
+      @include respond(tab-land) {
+        font-size: 10rem;
+      }
+
+      @include respond(phone) {
+        font-size: 8rem;
+        line-height: 0.75;
+      }
+    }
+
+    .roleText {
+      color: $color-white;
+      font-size: 3.5rem;
+      font-family: $font-roleText;
+
+      @include respond(tab-land) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .locationText {
+      margin-top: 3rem;
+      font-size: 3.5rem;
+      color: $color-white;
+      font-family: $font-location;
+
+      @include respond(tab-land) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(phone) {
+        margin-top: 1.5rem;
+      }
+
+      .basedInText {
+        z-index: 5;
+      }
+
+      .sydneyText {
+        z-index: 10;
+
+        // &::before {
+        //     content: '';
+        //     //display:none;
+        //     visibility: hidden;
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 25rem;
+        //     width: 35rem;
+        //     height:22rem;
+        //     background-color: rgb(205, 92, 92);
+        //     background-image: url('../../images/sydney-harbour.jpg');
+        //     background-size:cover;
+        //     opacity: 0%;
+        //     margin: 2rem 5rem;
+        //     z-index: 2;
+        //     transition: .3s ease;
+        //     border-radius: 5px;
+
+        // }
+
+        // &:hover {
+
+        //     &::before {
+        //         visibility: visible;
+        //         width: 35rem;
+        //         height:22rem;
+        //         opacity: 100%;
+        //     }
+
+        // }
+      }
+
+      .australiaText {
+        //position: relative;
+        //background-color: yellow;
+        z-index: 5;
+
+        // &::before {
+        //     content: '';
+        //     visibility: hidden;
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 25rem;
+        //     width: 35rem;
+        //     height:22rem;
+        //     background-color: rgb(205, 92, 92);
+        //     background-image: url('../../images/australia-map.jpg');
+        //     background-size:cover;
+        //     opacity: 0%;
+        //     margin: 2rem 5rem;
+        //     z-index: 2;
+        //     transition: .3s ease;
+        //     border-radius: 5px;
+
+        // }
+
+        // &:hover::before {
+        //     visibility: visible;
+        //     width: 35rem;
+        //     height:22rem;
+        //     opacity: 100%;
+        // }
+      }
+    }
+  }
+
+  .buttonsContainer {
+    //background-color: palevioletred;
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: max-content max-content;
+    grid-template-columns: max-content max-content;
+    z-index: 25;
+
+    @include respond(tab-port) {
+      flex: 1 0 100%;
+      grid-template-rows: max-content;
+      grid-template-columns: max-content max-content max-content max-content;
+      grid-gap: 2rem;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 12rem;
+      grid-template-rows: max-content max-content;
+      grid-template-columns: max-content max-content;
+    }
+
+    .buttonLabel {
+      font-size: 2.5rem;
+      padding-right: 1.5rem;
+      position: relative;
+      //overflow: hidden;
+      z-index: 10;
+
+      span {
+        color: $color-white;
+        position: relative;
+        z-index: 10;
+        font-family: $font-location;
+      }
+
+      &:hover span {
+        color: $color-white;
+      }
+
+      &::before {
+        content: "";
+        display: block;
         position: absolute;
+        z-index: 5;
         top: 0;
         left: 0;
+        width: 0%;
+        height: 100%;
+        background: rgba($color-blue, 0.4);
+        //clip-path: polygon(0 15%, 80% 15%, 80% 0, 100% 50%, 80% 98%, 80% 85%, 0 85%);
+        clip-path: polygon(
+          0 15%,
+          85% 15%,
+          85% 1%,
+          100% 50%,
+          85% 100%,
+          85% 85%,
+          0 85%
+        );
+        transform: translateY(2px) scale(1.2);
+        transition: 0.2s ease;
+      }
 
-        .video {
-
-            width: 100vw;
-            object-fit: cover;
-            height: 93vh;
-
-        }
+      &:hover::before {
+        width: 100%;
+      }
     }
 
-    .nameSloganContainer {
-        //background-color: rgba(54, 3, 157, 0.53);
-        display: flex;
-        flex-direction: column;
-        z-index: 36;
-        padding: 2rem;
+    .contactButton,
+    .downloadButton {
+      //margin: 2rem;
+      background-color: transparent;
+      border: 1px solid $color-white;
+      border-radius: 5px;
+      padding: 1rem;
+      transition: all 0.2s ease;
 
-        @include respond (tab-port) {
-            flex: 1 0 100%;
-        }
+      &:hover {
+        transform: translate(-0.2rem, -0.5rem);
+        background-color: $color-white;
+      }
 
-        @include respond (phone) {
-            align-self: flex-start;
-            padding: 3rem 1rem 0rem 1rem;
-        }
+      &:hover .icon {
+        fill: $color-blue;
+      }
 
-
-        .nameText {
-            color: $color-white;
-            font-size: 12rem;
-            font-family: $font-name;
-            //text-transform: uppercase;
-
-            @include respond (tab-land) {
-                font-size: 10rem;
-            }
-
-            @include respond (phone) {
-                font-size: 8rem;
-                line-height: .75;
-            }
-        }
-        
-        .roleText{ 
-            color:$color-white;
-            font-size: 3.5rem;
-            font-family: $font-roleText;
-
-            @include respond (tab-land) {
-                font-size: 2.5rem;
-            }
-        }
-        
-
-        
-        .locationText {
-            margin-top: 3rem;
-            font-size: 3.5rem;
-            color:$color-white;
-            font-family: $font-location;
-
-            @include respond (tab-land) {
-                font-size: 2.5rem;
-            }
-
-
-            @include respond (phone) {
-                margin-top: 1.5rem;
-             }
-            
-
-            .basedInText {
-                z-index: 5;
-            }
-
-            .sydneyText {
-                
-                z-index: 10;
-
-                &::before {
-                    content: '';
-                    //display:none;
-                    visibility: hidden;
-                    position: absolute;
-                    bottom: 0;
-                    left: 25rem;
-                    width: 35rem;
-                    height:22rem;
-                    background-color: rgb(205, 92, 92);
-                    background-image: url('../../images/sydney-harbour.jpg');
-                    background-size:cover;
-                    opacity: 0%;
-                    margin: 2rem 5rem;
-                    z-index: 2;
-                    transition: .3s ease;
-                    border-radius: 5px;
-
-                    
-                }
-
-                &:hover {
-
-                    &::before {
-                        visibility: visible;
-                        width: 35rem;
-                        height:22rem;
-                        opacity: 100%;
-                    }
-                    
-                }
-
-                
-
-            }
-
-            .australiaText {
-                //position: relative;
-                //background-color: yellow;
-                z-index: 5;
-
-                &::before {
-                    content: '';
-                    visibility: hidden;
-                    position: absolute;
-                    bottom: 0;
-                    left: 25rem;
-                    width: 35rem;
-                    height:22rem;
-                    background-color: rgb(205, 92, 92);
-                    background-image: url('../../images/australia-map.jpg');
-                    background-size:cover;
-                    opacity: 0%;
-                    margin: 2rem 5rem;
-                    z-index: 2;
-                    transition: .3s ease;
-                    border-radius: 5px;
-
-                    
-                }
-
-                &:hover::before {
-                    visibility: visible;
-                    width: 35rem;
-                    height:22rem;
-                    opacity: 100%;
-                }
-            }
-
-
-        }
-
+      .icon {
+        width: 5rem;
+        height: 5rem;
+        fill: $color-white;
+      }
     }
-
-    .buttonsContainer {
-        //background-color: palevioletred;
-        display:grid;
-        grid-gap: 2rem;
-        justify-content: center;
-        align-items: center;
-        grid-template-rows: max-content max-content;
-        grid-template-columns:  max-content max-content;
-        z-index: 25;
-
-        @include respond (tab-port) {
-            flex: 1 0 100%;
-            grid-template-rows:max-content;
-            grid-template-columns:  max-content max-content  max-content max-content;
-            grid-gap: 2rem; 
-        }
-
-        @include respond (phone) {
-            margin-bottom: 12rem;
-            grid-template-rows: max-content max-content;
-            grid-template-columns:  max-content max-content;
-        }
-
-        .buttonLabel {
-            font-size: 2.5rem;
-            padding-right: 1.5rem;
-            position: relative;
-            //overflow: hidden;
-            z-index: 10;
-
-            span {
-                color: $color-white;
-                position: relative;
-                z-index: 10;
-                font-family: $font-location;
-            }
-
-            &:hover span {
-                color: $color-white;
-            }
-
-            &::before {
-                content: '';
-                display:block;
-                position: absolute;
-                z-index: 5;
-                top: 0;
-                left: 0;
-                width: 0%;
-                height: 100%;
-                background: rgba($color-blue, .4);
-                //clip-path: polygon(0 15%, 80% 15%, 80% 0, 100% 50%, 80% 98%, 80% 85%, 0 85%);
-                clip-path: polygon(0 15%, 85% 15%, 85% 1%, 100% 50%, 85% 100%, 85% 85%, 0 85%);
-                transform: translateY(2px) scale(1.2);
-                transition: .2s ease;
-            }
-            
-            &:hover::before {
-                width: 100%;
-                
-            }
-        }
-
-        .contactButton, .downloadButton {
-            //margin: 2rem;
-            background-color: transparent;
-            border: 1px solid $color-white;
-            border-radius: 5px;
-            padding: 1rem;
-            transition: all .2s ease;
-
-            
-
-            &:hover {
-                transform: translate(-.2rem, -.5rem);
-                background-color: $color-white;
-                
-            }
-
-            &:hover .icon {
-                    fill: $color-blue;
-            }
-
-            .icon {
-                width: 5rem;
-                height: 5rem;
-                fill: $color-white;
-                
-            }
-        }
-
-    }
+  }
 }
