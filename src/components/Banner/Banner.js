@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ReactTypingEffect from "react-typing-effect";
-import ContactModal from "../Modals/ContactModal/ContactModal";
 import NextBtn from "../NextBtn/NextBtn";
 
 //import video from '../../videos/LPageOpt.mp4';
@@ -17,13 +16,6 @@ import ResumePDF from "../../resume/Patrick_Minda_Resume_Portfolio.pdf";
 import classes from "./Banner.module.scss";
 
 const Banner = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const modalHandler = () => {
-    console.log("bt pressed");
-    setModalOpen(true);
-  };
-
   return (
     <div className={classes.Banner} id="banner">
       <div className={classes.bgVideoContainer}>
@@ -33,8 +25,6 @@ const Banner = () => {
         </video>
       </div>
       <div className={classes.nameSloganContainer}>
-        {modalOpen ? <ContactModal closeModal={setModalOpen(false)} /> : null}
-
         {/* <ReactTypingEffect
                             text="Patrick Minda." //text=["Hello.", "World!"]
                             speed="75"

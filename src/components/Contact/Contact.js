@@ -8,7 +8,6 @@ import { IoIosMail, IoIosArrowDropup } from "react-icons/io";
 
 import { Link } from "react-scroll";
 
-import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
 import emailjs from "emailjs-com";

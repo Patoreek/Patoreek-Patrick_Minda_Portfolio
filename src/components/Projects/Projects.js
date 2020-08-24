@@ -12,7 +12,6 @@ import { ReactComponent as LiveSVG } from "../../images/live.svg";
 
 import { DiGithubFull, DiGithubBadge } from "react-icons/di";
 
-import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const Projects = () => {
@@ -32,7 +31,7 @@ const Projects = () => {
               <div
                 className={`${classes.imageContainer} ${classes.imageContainer__red}`}
               >
-                <img src={image1}></img>
+                <img src={image1} alt="project homepagewebsite"></img>
               </div>
               <div className={classes.titleContainer}>
                 <h3>Locus</h3>
@@ -104,7 +103,7 @@ const Projects = () => {
               <div
                 className={`${classes.imageContainer} ${classes.imageContainer__blue}`}
               >
-                <img src={image2}></img>
+                <img src={image2} alt="project homepage website"></img>
               </div>
               <div className={classes.titleContainer}>
                 <h3>Brighte</h3>
@@ -177,7 +176,7 @@ const Projects = () => {
               <div
                 className={`${classes.imageContainer} ${classes.imageContainer__green}`}
               >
-                <img src={image3}></img>
+                <img src={image3} alt="project homepagewebsite"></img>
               </div>
               <div className={classes.titleContainer}>
                 <h3>MOMENTO</h3>
