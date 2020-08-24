@@ -53,6 +53,8 @@
       color: $color-white;
       font-size: 12rem;
       font-family: $font-name;
+      text-shadow: 2px 5px 3px rgb(43, 42, 42);
+
       //text-transform: uppercase;
 
       @include respond(tab-land) {
@@ -80,6 +82,7 @@
       font-size: 3.5rem;
       color: $color-white;
       font-family: $font-location;
+      text-shadow: 2px 5px 3px rgb(43, 42, 42);
 
       @include respond(tab-land) {
         font-size: 2.5rem;
@@ -197,6 +200,7 @@
         position: relative;
         z-index: 10;
         font-family: $font-location;
+        text-shadow: 2px 5px 3px rgb(43, 42, 42);
       }
 
       &:hover span {
@@ -240,6 +244,7 @@
       border-radius: 5px;
       padding: 1rem;
       transition: all 0.2s ease;
+      box-shadow: 2px 5px 3px rgb(43, 42, 42);
 
       &:hover {
         transform: translate(-0.2rem, -0.5rem);
