@@ -4,8 +4,13 @@ import classes from "./Toolbar.module.scss";
 
 import { Link } from "react-scroll";
 
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+
 const Toolbar = () => {
   const [scrolled, setScrolled] = useState(false);
+
+  const [mobNav, setMobNav] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -25,9 +30,14 @@ const Toolbar = () => {
     });
   }, []);
 
+  const toggleMobileNav = () => {
+    setMobNav(!mobNav);
+  };
+
   return (
     <div>
       {scrolled ? <div className={classes.invisNav}></div> : ""}
+
       <nav
         className={
           scrolled
@@ -91,6 +101,94 @@ const Toolbar = () => {
           Contact
         </Link>
       </nav>
+
+      <nav
+        className={
+          scrolled
+            ? [classes.mobileNav, classes.scrolled].join(" ")
+            : classes.mobileNav
+        }
+      >
+        <GiHamburgerMenu
+          className={classes.navToggleBtn}
+          onClick={toggleMobileNav}
+        />
+      </nav>
+
+      <div
+        className={
+          mobNav
+            ? [classes.mobileToolbar, classes.openNav].join(" ")
+            : classes.mobileToolbar
+        }
+        id="mobileToolbar"
+      >
+        <IoMdClose className={classes.navCloseBtn} onClick={toggleMobileNav} />
+        {/* //TODO: BANNER */}
+        <Link
+          to="banner"
+          smooth={true}
+          spy={true}
+          duration={1500}
+          offset={-65}
+          className={classes.navLink}
+          onClick={toggleMobileNav}
+        >
+          Home
+        </Link>
+
+        {/* //TODO: BIO */}
+        <Link
+          to="bio"
+          smooth={true}
+          spy={true}
+          duration={1500}
+          offset={-20}
+          className={classes.navLink}
+          onClick={toggleMobileNav}
+        >
+          Bio
+        </Link>
+
+        {/* //TODO: SKILLS */}
+        <Link
+          to="skills"
+          smooth={true}
+          spy={true}
+          duration={1500}
+          offset={45}
+          className={classes.navLink}
+          onClick={toggleMobileNav}
+        >
+          Skills
+        </Link>
+
+        {/* //TODO: PROJECTS */}
+        <Link
+          to="projects"
+          smooth={true}
+          spy={true}
+          duration={1500}
+          offset={140}
+          className={classes.navLink}
+          onClick={toggleMobileNav}
+        >
+          Projects
+        </Link>
+
+        {/* //TODO: CONTACT */}
+        <Link
+          to="contact"
+          smooth={true}
+          spy={true}
+          duration={1500}
+          offset={0}
+          className={classes.navLink}
+          onClick={toggleMobileNav}
+        >
+          Contact
+        </Link>
+      </div>
     </div>
   );
 };
