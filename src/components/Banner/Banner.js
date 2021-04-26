@@ -47,6 +47,17 @@ const Banner = () => {
           <span className={classes.basedInText}>Based in</span>{" "}
           <span className={classes.sydneyText}>Sydney</span>,{" "}
           <span className={classes.australiaText}>Australia</span>
+          <div className={classes.newPortfolio}>
+            <p className={classes.newPortfolio__checkout}>
+              Check out my new{" "}
+              <a target="_blank" href="https://patrickminda2021.netlify.app/">
+                portfolio
+              </a>
+            </p>
+            <span className={classes.newPortfolio__wip}>
+              It's still a work in progress
+            </span>
+          </div>
         </p>
       </div>
 
