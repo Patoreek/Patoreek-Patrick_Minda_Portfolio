@@ -304,9 +304,8 @@ const Skills = () => {
             />
             <h3 className={classes.traitHeader}>Communication</h3>
             <p className={classes.traitDescription}>
-              Clear and Precise communication. I make to that I understand what
-              is being conveyed. Great at listening and effectively follow
-              instructions. Able to be a team player.
+              Clear and Precise communication. Great at listening and
+              effectively follow instructions. Able to be a team player.
             </p>
           </div>
 

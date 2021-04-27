@@ -149,20 +149,21 @@ const Projects = () => {
               </div>
               <div className={classes.liveBtnContainer}>
                 {/* CHANGE THIS TO a TAG WHEN THERE IS A LIVE VERSION OR THERE IS ANOTHER PROJECT */}
-                <div
+                <a
+                  href="https://www.locusdive.com/"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className={`${classes.liveBtn} ${classes.liveBtn__disabled}`}
+                  className={`${classes.liveBtn}`}
                 >
                   <span
-                    className={`${classes.liveText} ${classes.liveText__blue} ${classes.liveText__disabled} `}
+                    className={`${classes.liveText} ${classes.liveText__blue}`}
                   >
                     Live
                   </span>
                   <LiveSVG
-                    className={`${classes.liveIcon} ${classes.liveIcon__blue} ${classes.liveIcon__disabled}`}
+                    className={`${classes.liveIcon} ${classes.liveIcon__blue}`}
                   />
-                </div>
+                </a>
               </div>
             </div>
           </div>
