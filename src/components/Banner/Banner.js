@@ -5,6 +5,7 @@ import NextBtn from "../NextBtn/NextBtn";
 
 //import video from '../../videos/LPageOpt.mp4';
 import video from "../../videos/Mars_Orbit.mp4";
+import sydneyImg from "../../images/sydney-harbour.jpg";
 
 import { ReactComponent as ChatIcon } from "../../images/bubbles3.svg";
 import { ReactComponent as DownloadIcon } from "../../images/file-text2.svg";
@@ -19,10 +20,11 @@ const Banner = () => {
   return (
     <div className={classes.Banner} id="banner">
       <div className={classes.bgVideoContainer}>
-        <video className={classes.video} autoPlay muted loop>
+        <img src={sydneyImg} />
+        {/* <video className={classes.video} autoPlay muted loop>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
       <div className={classes.nameSloganContainer}>
         {/* <ReactTypingEffect
