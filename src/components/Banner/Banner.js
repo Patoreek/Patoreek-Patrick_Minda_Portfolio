@@ -38,7 +38,7 @@ const Banner = () => {
 
         <p className={classes.roleText}>
           <ReactTypingEffect
-            text={"Jnr. Fullstack Javascript Developer"} //text=["Hello.", "World!"]
+            text={"Fullstack Javascript Developer"} //text=["Hello.", "World!"]
             speed="60"
             typingDelay="2500"
             eraseDelay="1000000"
